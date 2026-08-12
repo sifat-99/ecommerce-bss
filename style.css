@@ -108,12 +108,6 @@ header {
   height: 96px !important;
 }
 
-@media (max-width: 1200px) {
-  header {
-    padding: 0 16px !important;
-  }
-}
-
 .drawer-open .swiper-overlay {
   opacity: 1;
   pointer-events: auto;
@@ -127,4 +121,18 @@ header {
 .dropdown-item {
   font-size: 15px;
   padding: 8px 20px;
+}
+
+.nav-close-message {
+  margin-right: 100px !important;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  header {
+    padding: 0 16px !important;
+  }
+  .nav-close-message {
+    margin-right: 15px !important;
+  }
 }
