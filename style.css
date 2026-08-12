@@ -1,18 +1,116 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 
-.font-brand {
-  font-family: "Archivo Black", sans-serif;
+/* --- Custom Font Declarations --- */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi Font Family/Satoshi-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi Font Family/Satoshi-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi Font Family/Satoshi-MediumItalic.woff")
+    format("woff");
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi Font Family/Satoshi-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/Satoshi Font Family/Satoshi-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "Integral CF";
+  src: url("./fonts/Integral CF/Fontspring-DEMO-integralcf-bold.otf")
+    format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral CF";
+  src: url("./fonts/Integral CF/Fontspring-DEMO-integralcf-extrabold.otf")
+    format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Integral CF";
+  src: url("./fonts/Integral CF/Fontspring-DEMO-integralcf-heavy.otf")
+    format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --bs-body-font-family: "Satoshi", sans-serif;
+}
+
+/* Body tag merged and fixed */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--bs-body-font-family);
   margin: 0;
   padding: 0;
   background-color: #fff;
 }
 
+/* --- Font Utility Classes (এগুলো আপনি HTML এ সাজেশন পাবেন) --- */
+.font-inter {
+  font-family: "Inter", sans-serif !important;
+}
+.font-brand-normal {
+  font-family: "Integral CF", sans-serif !important;
+  font-weight: 400 !important;
+}
+.font-brand-bold {
+  font-family: "Integral CF", sans-serif !important;
+  font-weight: 700 !important;
+}
+.font-brand-extrabold {
+  font-family: "Integral CF", sans-serif !important;
+  font-weight: 800 !important;
+}
+.font-brand-heavy {
+  font-family: "Integral CF", sans-serif !important;
+  font-weight: 900 !important;
+}
+.font-primary-regular {
+  font-family: "Satoshi", sans-serif !important;
+  font-weight: 400 !important;
+}
+.font-primary-medium {
+  font-family: "Satoshi", sans-serif !important;
+  font-weight: 500 !important;
+}
+.font-primary-semibold {
+  font-family: "Satoshi", sans-serif !important;
+  font-weight: 600 !important;
+}
+.font-primary-bold {
+  font-family: "Satoshi", sans-serif !important;
+  font-weight: 700 !important;
+}
+.font-primary-black {
+  font-family: "Satoshi", sans-serif !important;
+  font-weight: 900 !important;
+}
+
+/* --- Other Styles --- */
 .nav-search-bar {
   background-color: #f0f0f0;
   border-radius: 62px;
@@ -43,7 +141,7 @@ body {
 .desktop-nav-links a {
   color: #000;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
 }
 
@@ -70,7 +168,7 @@ body {
 
 .app-swiper {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
 }
 
 .app-swiper > .swiper-wrapper > .app-menu-slide {
@@ -128,11 +226,110 @@ header {
   cursor: pointer;
 }
 
+.bg-secondary {
+  background-color: #f2f0f1 !important;
+}
+.banner-section {
+  padding: 0px 100px;
+  overflow: hidden;
+}
+
+.banner-title {
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: 0px;
+  margin-bottom: 32px;
+}
+.banner-text {
+  margin-bottom: 24px;
+}
+.banner-button {
+  margin-bottom: 48px;
+  width: 210px;
+  height: 52px;
+  text-align: center;
+}
+
+.star-1 {
+  top: 45%;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  z-index: 99999;
+}
+
+.star-2 {
+  top: 10%;
+  right: 5%;
+  width: 104px;
+  height: 104px;
+  z-index: 99999;
+}
+
+.banner-right-col {
+  height: 100%;
+}
+
+.banner-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  z-index: 1;
+}
+
+@media (max-width: 1300px) {
+  .banner-section {
+    padding: 0px 50px;
+  }
+}
 @media (max-width: 1200px) {
+  .banner-title {
+    font-size: 48px;
+  }
   header {
     padding: 0 16px !important;
+    height: 64px !important;
   }
   .nav-close-message {
     margin-right: 15px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner-title {
+    font-size: 36px;
+    margin-bottom: 20px !important;
+  }
+  .banner-text {
+    margin-bottom: 24px !important;
+  }
+  .banner-button {
+    margin-bottom: 20px !important;
+    width: 100%;
+  }
+  .banner-section {
+    padding: 16px;
+  }
+  .banner-hero-img {
+    position: relative;
+    max-height: 500px;
+  }
+  .star-1 {
+    top: 30%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+  }
+  .star-2 {
+    top: 5%;
+    right: 5%;
+    width: 70px;
+    height: 70px;
+  }
+  .details-gap {
+    gap: 12px;
+    justify-content: center;
+    /* text-align: center; */
   }
 }
