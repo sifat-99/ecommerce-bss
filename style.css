@@ -277,10 +277,21 @@ header {
   object-position: top;
   z-index: 1;
 }
+.brand-section {
+  padding: 45px 100px;
+  gap: 106px;
+}
 
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   .banner-section {
     padding: 0px 50px;
+  }
+  .brand-section {
+    padding: 45px 75px;
+    gap: 56px;
+  }
+  .banner-button {
+    margin-bottom: 12px;
   }
 }
 @media (max-width: 1200px) {
@@ -309,7 +320,7 @@ header {
     width: 100%;
   }
   .banner-section {
-    padding: 16px;
+    padding: 16px 16px 0px 16px;
   }
   .banner-hero-img {
     position: relative;
@@ -330,6 +341,34 @@ header {
   .details-gap {
     gap: 12px;
     justify-content: center;
-    /* text-align: center; */
+  }
+  .brand-section {
+    padding: 40px 16px;
+    gap: 24px;
+  }
+  .brand-logo {
+    max-height: 24px;
+    width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 28px;
+    margin-bottom: 12px !important;
+  }
+  .banner-text {
+    font-size: 14px !important;
+    margin-bottom: 16px !important;
+  }
+  .banner-button {
+    height: 44px;
+    font-size: 14px !important;
+  }
+  .stats-container h3 {
+    font-size: 24px !important;
+  }
+  .stats-container p {
+    font-size: 12px !important;
   }
 }
