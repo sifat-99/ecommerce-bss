@@ -59,3 +59,26 @@ function handleResize() {
 }
 window.addEventListener('resize', handleResize);
 handleResize();
+
+document.querySelectorAll('.new-arrivals-section').forEach(section => {
+    const seeMoreBtn = section.querySelector('.btn-secondary');
+    const toggleableCards = section.querySelectorAll('.mobile-hidden');
+
+    if (seeMoreBtn && toggleableCards.length > 0) {
+        let isExpanded = false;
+
+        seeMoreBtn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+
+            toggleableCards.forEach(card => {
+                if (isExpanded) {
+                    card.classList.remove('mobile-hidden');
+                } else {
+                    card.classList.add('mobile-hidden');
+                }
+            });
+
+            seeMoreBtn.textContent = isExpanded ? 'View Less' : 'View All';
+        });
+    }
+});

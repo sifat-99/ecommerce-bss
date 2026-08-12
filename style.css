@@ -249,13 +249,38 @@ header {
   height: 52px;
   text-align: center;
 }
+.banner-button:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.btn-secondary {
+  margin-top: 36px;
+  background-color: #fff !important;
+  width: 218px;
+  height: 52px;
+  border-width: 1px;
+  padding-top: 16px;
+  padding-right: 54px;
+  padding-bottom: 16px;
+  padding-left: 54px;
+  opacity: 1;
+  color: #000;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  transform: scale(1.05);
+}
 
 .star-1 {
   top: 45%;
   left: 0;
   width: 56px;
   height: 56px;
-  z-index: 99999;
+  z-index: 10;
 }
 
 .star-2 {
@@ -263,7 +288,7 @@ header {
   right: 5%;
   width: 104px;
   height: 104px;
-  z-index: 99999;
+  z-index: 10;
 }
 
 .banner-right-col {
@@ -280,6 +305,65 @@ header {
 .brand-section {
   padding: 45px 100px;
   gap: 106px;
+}
+.new-arrivals-section {
+  margin-bottom: 76px;
+}
+
+.new-arrivals-title {
+  margin-top: 72px;
+}
+
+.product-cards-grid {
+  padding: 0 100px;
+}
+
+.card {
+  height: 100%;
+  border: none;
+}
+.new-arrivals-title {
+  margin-bottom: 55px;
+  text-transform: uppercase;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 295 / 298;
+  border-radius: 20px;
+  opacity: 1;
+  object-fit: cover;
+}
+
+.parcentage-red.active {
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  opacity: 1;
+  border-radius: 62px;
+  padding-top: 6px;
+  padding-right: 14px;
+  padding-bottom: 6px;
+  padding-left: 14px;
+  background: rgba(255, 51, 51, 0.1);
+  color: rgba(255, 51, 51, 1);
+}
+
+.price {
+  font-size: 24px;
+}
+
+.price-old {
+  text-decoration: line-through !important;
+}
+
+.hr {
+  margin: 0px 100px;
+}
+
+.card-body {
+  padding: 16px 0px 0px 0px;
 }
 
 @media (max-width: 1400px) {
@@ -305,6 +389,12 @@ header {
   .nav-close-message {
     margin-right: 15px !important;
   }
+  .hr {
+    margin: 0px 20px;
+  }
+  .product-cards-grid {
+    padding: 0px 20px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -320,7 +410,15 @@ header {
     width: 100%;
   }
   .banner-section {
-    padding: 16px 16px 0px 16px;
+    padding: 16px 0px 0px 0px;
+  }
+  .banner-text-col {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .banner-right-col {
+    padding-left: 0;
+    padding-right: 0;
   }
   .banner-hero-img {
     position: relative;
@@ -350,12 +448,28 @@ header {
     max-height: 24px;
     width: auto;
   }
+  .new-arrivals-title {
+    margin-bottom: 50px !important;
+  }
+  .rating-text {
+    font-size: 14px;
+  }
+  .product-cards-grid {
+    padding: 0px 8px;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .banner-title {
     font-size: 28px;
     margin-bottom: 12px !important;
+  }
+
+  .card-title {
+    width: 100%;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .banner-text {
     font-size: 14px !important;
@@ -370,5 +484,23 @@ header {
   }
   .stats-container p {
     font-size: 12px !important;
+  }
+
+  .btn-secondary {
+    margin-top: 0px !important;
+  }
+
+  .new-arrivals-title {
+    margin-bottom: 50px !important;
+  }
+
+  .rating-text {
+    font-size: 11px;
+  }
+  .price {
+    font-size: 20px;
+  }
+  .mobile-hidden {
+    display: none !important;
   }
 }

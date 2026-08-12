@@ -37,6 +37,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro/dist/css/coreui.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
     <title>Shop.co</title>
@@ -204,7 +208,7 @@
                   class="row m-0 h-100 w-100 align-items-stretch justify-content-center"
                 >
                   <div
-                    class="col-12 col-md-6 col-lg-6 position-relative d-flex flex-column justify-content-center z-1 pt-md-5 pt-lg-0"
+                    class="col-12 col-md-6 col-lg-6 position-relative d-flex flex-column justify-content-center z-1 pt-md-5 pt-lg-0 banner-text-col"
                   >
                     <h1
                       class="banner-title font-brand-bold text-black text-uppercase"
@@ -299,7 +303,7 @@
             </section>
             <!-- Brand Section -->
             <section
-              class="brand-section bg-black d-flex flex-wrap justify-content-around align-items-center mb-5"
+              class="brand-section bg-black d-flex flex-wrap justify-content-around align-items-center"
             >
               <img
                 class="img-fluid brand-logo"
@@ -327,6 +331,367 @@
                 alt=""
               />
             </section>
+            <!-- New Arrivals Section -->
+            <section class="new-arrivals-section">
+              <div class="new-arrivals-header">
+                <h2
+                  class="new-arrivals-title banner-title font-brand-bold text-black text-center"
+                >
+                  New Arrivals
+                </h2>
+                <div
+                  class="product-cards-grid row g-3 col-12 w-100 mx-auto justify-content-center"
+                >
+                  <div class="card col-8 col-sm-5 col-md-4 col-lg-3">
+                    <img
+                      src="./images/Product.png"
+                      class="card-img-top"
+                      alt="Product Image"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title font-primary-bold fs-6 fs-md-5">
+                        T-shith with Tape Details
+                      </h5>
+                      <div
+                        class="d-flex gap-2 align-items-center"
+                        style="height: 19px; margin-bottom: 8px"
+                      >
+                        <div
+                          data-coreui-size="sm"
+                          data-coreui-precision="0.25"
+                          data-coreui-toggle="rating"
+                          data-coreui-value="4.5"
+                        ></div>
+                        <p
+                          class="font-primary-regular text-black mb-0 rating-text"
+                        >
+                          4.5/5
+                        </p>
+                      </div>
+                      <div
+                        class="price-box d-flex align-items-center gap-1 justify-content-between"
+                      >
+                        <p class="price-new font-primary-bold price">$120</p>
+                        <p class="price-old price strikethrough"></p>
+                        <a href="#" class="parcentage-red"></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card col-8 col-sm-5 col-md-4 col-lg-3">
+                    <img
+                      src="./images/Product 2.png"
+                      class="card-img-top"
+                      alt="Product Image"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title font-primary-bold fs-6 fs-md-5">
+                        Skinny Fit Jeans
+                      </h5>
+                      <div
+                        class="d-flex gap-2 align-items-center"
+                        style="height: 19px; margin-bottom: 8px"
+                      >
+                        <div
+                          data-coreui-size="sm"
+                          data-coreui-precision="0.25"
+                          data-coreui-toggle="rating"
+                          data-coreui-value="3.5"
+                        ></div>
+                        <p
+                          class="font-primary-regular text-black mb-0 rating-text"
+                        >
+                          3.5/5
+                        </p>
+                      </div>
+                      <div
+                        class="price-box d-flex align-items-center justify-content-start"
+                        style="gap: 12px"
+                      >
+                        <p class="price-new font-primary-bold price">$240</p>
+                        <p
+                          class="price-old price strikethrough font-primary-medium text-secondary"
+                        >
+                          $260
+                        </p>
+                        <p class="parcentage-red active font-primary-medium">
+                          -20%
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card col-8 col-sm-5 col-md-4 col-lg-3 mobile-hidden"
+                  >
+                    <img
+                      src="./images/Product 3.png"
+                      class="card-img-top"
+                      alt="Product Image"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title font-primary-bold fs-6 fs-md-5">
+                        Checkered Shirt
+                      </h5>
+                      <div
+                        class="d-flex gap-2 align-items-center"
+                        style="height: 19px; margin-bottom: 8px"
+                      >
+                        <div
+                          data-coreui-size="sm"
+                          data-coreui-precision="0.25"
+                          data-coreui-toggle="rating"
+                          data-coreui-value="4.5"
+                        ></div>
+                        <p
+                          class="font-primary-regular text-black mb-0 rating-text"
+                        >
+                          4.5/5
+                        </p>
+                      </div>
+                      <div
+                        class="price-box d-flex align-items-center justify-content-start"
+                        style="gap: 12px"
+                      >
+                        <p class="price-new font-primary-bold price">$180</p>
+                        <p
+                          class="price-old price strikethrough font-primary-medium text-secondary"
+                        ></p>
+                        <p class="parcentage-red font-primary-medium"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card col-8 col-sm-5 col-md-4 col-lg-3 mobile-hidden"
+                  >
+                    <img
+                      src="./images/Product 4.png"
+                      class="card-img-top"
+                      alt="Product Image"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title font-primary-bold fs-6 fs-md-5">
+                        Sleeve Striped T-Shirt
+                      </h5>
+                      <div
+                        class="d-flex gap-2 align-items-center"
+                        style="height: 19px; margin-bottom: 8px"
+                      >
+                        <div
+                          data-coreui-size="sm"
+                          data-coreui-precision="0.25"
+                          data-coreui-toggle="rating"
+                          data-coreui-value="4.5"
+                        ></div>
+                        <p
+                          class="font-primary-regular text-black mb-0 rating-text"
+                        >
+                          4.5/5
+                        </p>
+                      </div>
+                      <div
+                        class="price-box d-flex align-items-center justify-content-start"
+                        style="gap: 12px"
+                      >
+                        <p class="price-new font-primary-bold price">$130</p>
+                        <p
+                          class="price-old price strikethrough font-primary-medium text-secondary"
+                        >
+                          $160
+                        </p>
+                        <p class="parcentage-red active font-primary-medium">
+                          -30%
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <button
+                    class="btn btn-secondary d-flex align-items-center justify-content-center rounded-pill font-primary-medium"
+                  >
+                    View All
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <hr class="hr" />
+            <!-- Top Selling Section -->
+            <section class="new-arrivals-section">
+              <div class="new-arrivals-header">
+                <h2
+                  class="new-arrivals-title banner-title font-brand-bold text-black text-center"
+                >
+                  top selling
+                </h2>
+                <div
+                  class="product-cards-grid row g-3 col-12 w-100 mx-auto justify-content-center"
+                >
+                  <div class="card col-8 col-sm-5 col-md-4 col-lg-3">
+                    <img
+                      src="./images/Product 5.png"
+                      class="card-img-top"
+                      alt="Product Image"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title font-primary-bold fs-6 fs-md-5">
+                        Vertical Striped Shirt
+                      </h5>
+                      <div
+                        class="d-flex gap-2 align-items-center"
+                        style="height: 19px; margin-bottom: 8px"
+                      >
+                        <div
+                          data-coreui-size="sm"
+                          data-coreui-precision="0.25"
+                          data-coreui-toggle="rating"
+                          data-coreui-value="5"
+                        ></div>
+                        <p
+                          class="font-primary-regular text-black mb-0 rating-text"
+                        >
+                          5/5
+                        </p>
+                      </div>
+                      <div
+                        class="price-box d-flex align-items-center gap-1 justify-content-between"
+                      >
+                        <p class="price-new font-primary-bold price">$212</p>
+                        <p class="price-old price strikethrough">$232</p>
+                        <p class="parcentage-red active font-primary-medium">
+                          -20%
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card col-8 col-sm-5 col-md-4 col-lg-3">
+                    <img
+                      src="./images/Product 6.png"
+                      class="card-img-top"
+                      alt="Product Image"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title font-primary-bold fs-6 fs-md-5">
+                        Loose Fit Bermuda Shorts
+                      </h5>
+                      <div
+                        class="d-flex gap-2 align-items-center"
+                        style="height: 19px; margin-bottom: 8px"
+                      >
+                        <div
+                          data-coreui-size="sm"
+                          data-coreui-precision="0.25"
+                          data-coreui-toggle="rating"
+                          data-coreui-value="3.5"
+                        ></div>
+                        <p
+                          class="font-primary-regular text-black mb-0 rating-text"
+                        >
+                          3.5/5
+                        </p>
+                      </div>
+                      <div
+                        class="price-box d-flex align-items-center justify-content-start"
+                        style="gap: 12px"
+                      >
+                        <p class="price-new font-primary-bold price">$145</p>
+                        <p
+                          class="price-old price strikethrough font-primary-medium text-secondary"
+                        ></p>
+                        <p class="parcentage-red font-primary-medium"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card col-8 col-sm-5 col-md-4 col-lg-3 mobile-hidden"
+                  >
+                    <img
+                      src="./images/Product 7.png"
+                      class="card-img-top"
+                      alt="Product Image"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title font-primary-bold fs-6 fs-md-5">
+                        Courage Graphic T-Shirt
+                      </h5>
+                      <div
+                        class="d-flex gap-2 align-items-center"
+                        style="height: 19px; margin-bottom: 8px"
+                      >
+                        <div
+                          data-coreui-size="sm"
+                          data-coreui-precision="0.25"
+                          data-coreui-toggle="rating"
+                          data-coreui-value="4.5"
+                        ></div>
+                        <p
+                          class="font-primary-regular text-black mb-0 rating-text"
+                        >
+                          4.5/5
+                        </p>
+                      </div>
+                      <div
+                        class="price-box d-flex align-items-center justify-content-start"
+                        style="gap: 12px"
+                      >
+                        <p class="price-new font-primary-bold price">$80</p>
+                        <p
+                          class="price-old price strikethrough font-primary-medium text-secondary"
+                        ></p>
+                        <p class="parcentage-red font-primary-medium"></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="card col-8 col-sm-5 col-md-4 col-lg-3 mobile-hidden"
+                  >
+                    <img
+                      src="./images/Product 8.png"
+                      class="card-img-top"
+                      alt="Product Image"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title font-primary-bold fs-6 fs-md-5">
+                        Faded Skinny Jeans
+                      </h5>
+                      <div
+                        class="d-flex gap-2 align-items-center"
+                        style="height: 19px; margin-bottom: 8px"
+                      >
+                        <div
+                          data-coreui-size="sm"
+                          data-coreui-precision="0.25"
+                          data-coreui-toggle="rating"
+                          data-coreui-value="4.5"
+                        ></div>
+                        <p
+                          class="font-primary-regular text-black mb-0 rating-text"
+                        >
+                          4.5/5
+                        </p>
+                      </div>
+                      <div
+                        class="price-box d-flex align-items-center justify-content-start"
+                        style="gap: 12px"
+                      >
+                        <p class="price-new font-primary-bold price">$210</p>
+                        <p
+                          class="price-old price strikethrough font-primary-medium text-secondary"
+                        ></p>
+                        <p class="parcentage-red font-primary-medium"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center">
+                  <button
+                    class="btn btn-secondary d-flex align-items-center justify-content-center rounded-pill font-primary-medium"
+                  >
+                    View All
+                  </button>
+                </div>
+              </div>
+            </section>
           </main>
         </div>
       </div>
@@ -339,5 +704,6 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro/dist/js/coreui.bundle.min.js"></script>
   </body>
 </html>
