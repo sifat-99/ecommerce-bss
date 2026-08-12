@@ -366,6 +366,38 @@ header {
   padding: 16px 0px 0px 0px;
 }
 
+.browse-by-dress-style-section {
+  padding: 0px 100px;
+}
+
+.img-dress {
+  height: 289px !important;
+}
+
+.dress-card-img {
+  object-position: left center;
+  transform: scale(1.1) translateX(10%);
+  transform-origin: left center;
+}
+
+.dress-card-img.lessmove {
+  transform: scale(1.1) translateX(5%);
+}
+.dress-card-img.zoomore {
+  transform: scale(3) translateX(2%) translateY(25%);
+}
+
+.dress-card-img.firstImage {
+  transform-origin: center;
+  transform: scale(-2.2, 2.2) translateX(10%) translateY(25%);
+}
+
+.browse-title {
+  padding-top: 70px;
+  padding-bottom: 64px;
+  margin-bottom: 0px;
+}
+
 @media (max-width: 1400px) {
   .banner-section {
     padding: 0px 50px;
@@ -376,6 +408,10 @@ header {
   }
   .banner-button {
     margin-bottom: 12px;
+  }
+
+  .browse-by-dress-style-section {
+    padding: 0px 50px;
   }
 }
 @media (max-width: 1200px) {
@@ -415,6 +451,7 @@ header {
   .banner-text-col {
     padding-left: 16px;
     padding-right: 16px;
+    padding-top: 20px !important;
   }
   .banner-right-col {
     padding-left: 0;
@@ -502,5 +539,29 @@ header {
   }
   .mobile-hidden {
     display: none !important;
+  }
+  .dress-card {
+    height: 190px !important;
+  }
+  .dress-card-img.lessmove {
+    transform: scale(1.1) translateX(5%);
+  }
+  .dress-card-img.zoomore {
+    transform: scale(3) translateX(-10%) translateY(25%);
+  }
+
+  .dress-card-img.firstImage {
+    transform-origin: center;
+    transform: scale(-1.8, 1.8) translateX(10%);
+  }
+
+  .browse-title {
+    padding-top: 40px;
+    padding-bottom: 28px;
+    margin-bottom: 0px;
+  }
+
+  .browse-by-dress-style-section {
+    padding: 0px 16px;
   }
 }
