@@ -82,3 +82,36 @@ document.querySelectorAll('.new-arrivals-section').forEach(section => {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const reviewSwiper = new Swiper('.review-swiper', {
+        loop: true,
+        watchSlidesProgress: true,
+        spaceBetween: 20,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.swiper-next-btn',
+            prevEl: '.swiper-prev-btn',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 16
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 24
+            },
+            1200: {
+                slidesPerView: 3.5,
+                spaceBetween: 24
+            }
+        }
+    });
+
+});

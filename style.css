@@ -398,6 +398,74 @@ header {
   margin-bottom: 0px;
 }
 
+/* --- Review Section Styles --- */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.review-nav-arrows i {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.review-nav-arrows i:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.review-card {
+  background-color: #fff;
+  height: 100%;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.carousel-review-container {
+  margin: 0px 100px;
+}
+
+.review-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.review-swiper {
+  padding-bottom: 20px;
+}
+
+.reviews-section {
+  position: relative;
+}
+.reviews-section::before,
+.reviews-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+.reviews-section::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.reviews-section::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
 @media (max-width: 1400px) {
   .banner-section {
     padding: 0px 50px;
@@ -430,6 +498,13 @@ header {
   }
   .product-cards-grid {
     padding: 0px 20px;
+  }
+  .carousel-review-container {
+    margin: 0px 50px;
+  }
+  .reviews-section::before,
+  .reviews-section::after {
+    width: 50px;
   }
 }
 
@@ -563,5 +638,21 @@ header {
 
   .browse-by-dress-style-section {
     padding: 0px 16px;
+  }
+  .reviews-section h2 {
+    font-size: 2rem !important;
+  }
+  .carousel-review-container {
+    margin: 0px 16px;
+  }
+  .reviews-section::before,
+  .reviews-section::after {
+    width: 16px;
+  }
+}
+
+@media (max-width: 374px) {
+  .fa-circle-user {
+    display: none;
   }
 }
