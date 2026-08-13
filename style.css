@@ -325,6 +325,9 @@ header {
   margin-bottom: 55px;
   text-transform: uppercase;
 }
+.new-arrivals-title.banner-title {
+  font-size: 48px !important;
+}
 
 .card-img-top {
   width: 100%;
@@ -367,6 +370,9 @@ header {
 
 .browse-by-dress-style-section {
   padding: 0px 100px;
+}
+.browse-title {
+  font-size: 48px !important;
 }
 
 .img-dress {
@@ -664,11 +670,16 @@ header {
   }
 
   .btn-secondary {
-    margin-top: 0px !important;
+    width: 100%;
+    margin: 8px 16px !important;
   }
 
   .new-arrivals-title {
-    margin-bottom: 50px !important;
+    margin-bottom: 32px !important;
+    margin-top: 50px;
+  }
+  .new-arrivals-section {
+    margin-bottom: 40px !important;
   }
 
   .rating-text {
@@ -710,6 +721,10 @@ header {
   .carousel-review-container {
     margin: 0px 16px;
   }
+  .reviews-section {
+    margin-top: 50px !important;
+    margin-bottom: 130px !important;
+  }
   .reviews-section::before,
   .reviews-section::after {
     width: 16px;
@@ -719,5 +734,12 @@ header {
 @media (max-width: 374px) {
   .fa-circle-user {
     display: none;
+  }
+  .price {
+    font-size: 16px;
+  }
+  .parcentage-red.active {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }
