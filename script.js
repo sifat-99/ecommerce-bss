@@ -47,18 +47,7 @@ if (swiperOverlay) {
     swiperOverlay.addEventListener('click', closeMenu);
 }
 
-function handleResize() {
-    if (window.innerWidth >= 992) {
-        if (swiper.activeIndex === 0) {
-            swiper.slideTo(1, 0);
-        }
-        swiper.allowTouchMove = false;
-    } else {
-        swiper.allowTouchMove = true;
-    }
-}
-window.addEventListener('resize', handleResize);
-handleResize();
+swiper.allowTouchMove = false;
 
 document.querySelectorAll('.new-arrivals-section').forEach(section => {
     const seeMoreBtn = section.querySelector('.btn-secondary');
