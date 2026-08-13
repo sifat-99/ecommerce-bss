@@ -11,30 +11,16 @@ var menuButton = document.querySelector('.menu-button');
 var closeMenuButton = document.getElementById('close-menu');
 var swiperOverlay = document.getElementById('swiperOverlay');
 var contentSlide = document.querySelector('.app-content-slide');
-
-var swiper = new Swiper('.app-swiper', {
-    slidesPerView: 'auto',
-    initialSlide: 1,
-    resistanceRatio: 0,
-    speed: 300,
-    slideToClickedSlide: false,
-    on: {
-        slideChangeTransitionStart: function () {
-            if (this.activeIndex === 0) {
-                contentSlide.classList.add('drawer-open');
-            } else {
-                contentSlide.classList.remove('drawer-open');
-            }
-        },
-    },
-});
+var appMenuSlide = document.querySelector('.app-menu-slide');
 
 var openMenu = function () {
-    swiper.slidePrev();
+    if (appMenuSlide) appMenuSlide.classList.add('open');
+    if (contentSlide) contentSlide.classList.add('drawer-open');
 };
 
 var closeMenu = function () {
-    swiper.slideNext();
+    if (appMenuSlide) appMenuSlide.classList.remove('open');
+    if (contentSlide) contentSlide.classList.remove('drawer-open');
 };
 
 if (menuButton) {
@@ -46,8 +32,6 @@ if (closeMenuButton) {
 if (swiperOverlay) {
     swiperOverlay.addEventListener('click', closeMenu);
 }
-
-swiper.allowTouchMove = false;
 
 document.querySelectorAll('.new-arrivals-section').forEach(section => {
     const seeMoreBtn = section.querySelector('.btn-secondary');
