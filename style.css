@@ -489,7 +489,6 @@ header {
 .footer-social-icon:hover {
   background-color: #000 !important;
   color: #fff !important;
-  transform: translateY(-3px);
 }
 
 .footer-social-icon.bg-black:hover {
