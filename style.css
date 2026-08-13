@@ -389,7 +389,7 @@ header {
   transform: scale(1.1) translateX(5%);
 }
 .dress-card-img.zoomore {
-  transform: scale(3) translateX(2%) translateY(25%);
+  transform: scale(3) translateX(-2%) translateY(25%);
 }
 
 .dress-card-img.firstImage {
