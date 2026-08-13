@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
-
-/* --- Custom Font Declarations --- */
 @font-face {
   font-family: "Satoshi";
   src: url("/fonts/Satoshi Font Family/Satoshi-Regular.woff") format("woff");
@@ -61,7 +59,6 @@
   --bs-body-font-family: "Satoshi", sans-serif;
 }
 
-/* Body tag merged and fixed */
 body {
   font-family: var(--bs-body-font-family);
   margin: 0;
@@ -69,7 +66,6 @@ body {
   background-color: #fff;
 }
 
-/* --- Font Utility Classes (এগুলো আপনি HTML এ সাজেশন পাবেন) --- */
 .font-inter {
   font-family: "Inter", sans-serif !important;
 }
@@ -110,7 +106,6 @@ body {
   font-weight: 900 !important;
 }
 
-/* --- Other Styles --- */
 .nav-search-bar {
   background-color: #f0f0f0;
   border-radius: 62px;
@@ -437,6 +432,7 @@ header {
 
 .reviews-section {
   position: relative;
+  margin: 32px 0px 90px 0px;
 }
 .reviews-section::before,
 .reviews-section::after {
@@ -466,6 +462,50 @@ header {
   );
 }
 
+.footer-main {
+  padding: 140px 100px 50px 100px;
+}
+.footer-newsletter {
+  padding: 0 100px;
+}
+
+.footer-social-icon {
+  width: 28px;
+  height: 28px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social-icon:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  transform: translateY(-3px);
+}
+
+.footer-social-icon.bg-black:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.footer-link {
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #000 !important;
+  text-decoration: underline !important;
+}
+
+.custom-slide {
+  display: flex;
+  width: 400px;
+  height: 240px;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
 @media (max-width: 1400px) {
   .banner-section {
     padding: 0px 50px;
@@ -482,13 +522,13 @@ header {
     padding: 0px 50px;
   }
 }
+
 @media (max-width: 1200px) {
   .banner-title {
     font-size: 48px;
   }
   header {
     padding: 0 16px !important;
-    height: 64px !important;
   }
   .nav-close-message {
     margin-right: 15px !important;
@@ -569,12 +609,30 @@ header {
   .product-cards-grid {
     padding: 0px 8px;
   }
+  .newsletter-box {
+    padding: 32px 24px !important;
+  }
+  .newsletter-box h2 {
+    font-size: 32px !important;
+    max-width: 100% !important;
+    text-align: left;
+  }
+
+  .footer-main {
+    padding: 140px 0px 50px 0px;
+  }
+  .footer-newsletter {
+    padding: 0 17px;
+  }
 }
 
 @media (max-width: 767px) {
   .banner-title {
     font-size: 28px;
     margin-bottom: 12px !important;
+  }
+  header {
+    height: 64px !important;
   }
 
   .card-title {

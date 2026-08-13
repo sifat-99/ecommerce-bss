@@ -134,7 +134,10 @@
           <div class="swiper-overlay d-lg-none" id="swiperOverlay"></div>
 
           <header class="bg-white sticky-top">
-            <div class="d-flex align-items-center h-100" style="gap: 40px">
+            <div
+              class="d-flex justify-content-between align-items-center h-100 w-100"
+              style="gap: 40px"
+            >
               <div class="d-flex align-items-center gap-3">
                 <button
                   class="btn border-0 p-0 d-lg-none menu-button text-dark fs-4 me-1 shadow-none"
@@ -182,13 +185,16 @@
                 <li><a href="#">New Arrivals</a></li>
                 <li><a href="#">Brands</a></li>
               </ul>
-              <div class="nav-search-bar d-none d-md-flex flex-grow-1">
+              <div
+                class="nav-search-bar d-none d-md-flex flex-grow-1"
+                style="max-width: 600px"
+              >
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder="Search for products..." />
               </div>
 
               <div
-                class="nav-icons d-flex align-items-center ms-auto"
+                class="nav-icons d-flex align-items-center"
                 style="gap: 14px"
               >
                 <a href="#" class="d-md-none"
@@ -711,7 +717,7 @@
                       class="dress-card card border-0 bg-white rounded-4 overflow-hidden position-relative h-100 shadow-sm"
                     >
                       <h3
-                        class="position-absolute top-0 start-0 m-3 font-primary-bold fs-4 z-1 text-black"
+                        class="position-absolute top-0 start-0 m-3 font-primary-bold fs-2 z-1 text-black"
                       >
                         Casual
                       </h3>
@@ -728,7 +734,7 @@
                       class="dress-card card border-0 bg-white rounded-4 overflow-hidden position-relative h-100 shadow-sm"
                     >
                       <h3
-                        class="position-absolute top-0 start-0 m-3 font-primary-bold fs-4 z-1 text-black"
+                        class="position-absolute top-0 start-0 m-3 font-primary-bold fs-2 z-1 text-black"
                       >
                         Formal
                       </h3>
@@ -745,7 +751,7 @@
                       class="dress-card card border-0 bg-white rounded-4 overflow-hidden position-relative h-100 shadow-sm"
                     >
                       <h3
-                        class="position-absolute top-0 start-0 m-3 font-primary-bold fs-4 z-1 text-black"
+                        class="position-absolute top-0 start-0 m-3 font-primary-bold fs-2 z-1 text-black"
                       >
                         Party
                       </h3>
@@ -762,7 +768,7 @@
                       class="dress-card card border-0 bg-white rounded-4 overflow-hidden position-relative h-100 shadow-sm"
                     >
                       <h3
-                        class="position-absolute top-0 start-0 m-3 font-primary-bold fs-4 z-1 text-black"
+                        class="position-absolute top-0 start-0 m-3 font-primary-bold fs-2 z-1 text-black"
                       >
                         Gym
                       </h3>
@@ -776,7 +782,8 @@
                 </div>
               </div>
             </section>
-            <section class="reviews-section py-5 mt-5 overflow-hidden">
+            <!-- Review Section -->
+            <section class="reviews-section py-5 overflow-hidden">
               <div class="carousel-review-container">
                 <div
                   class="d-flex justify-content-between align-items-end mb-4 gap-3"
@@ -801,7 +808,7 @@
                 <div class="swiper review-swiper" style="overflow: visible">
                   <div class="swiper-wrapper">
                     <!-- Slide 1 -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide custom-slide">
                       <div class="review-card border rounded-4 p-4">
                         <div class="stars mb-2" style="color: #ffc633">
                           <i class="fa-solid fa-star"></i>
@@ -831,7 +838,7 @@
                     </div>
 
                     <!-- Slide 2 -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide custom-slide">
                       <div class="review-card border rounded-4 p-4">
                         <div class="stars mb-2" style="color: #ffc633">
                           <i class="fa-solid fa-star"></i>
@@ -861,7 +868,7 @@
                     </div>
 
                     <!-- Slide 3 -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide custom-slide">
                       <div class="review-card border rounded-4 p-4">
                         <div class="stars mb-2" style="color: #ffc633">
                           <i class="fa-solid fa-star"></i>
@@ -891,7 +898,7 @@
                     </div>
 
                     <!-- Slide 4 -->
-                    <div class="swiper-slide">
+                    <div class="swiper-slide custom-slide">
                       <div class="review-card border rounded-4 p-4">
                         <div class="stars mb-2" style="color: #ffc633">
                           <i class="fa-solid fa-star"></i>
@@ -919,7 +926,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide custom-slide">
                       <div class="review-card border rounded-4 p-4">
                         <div class="stars mb-2" style="color: #ffc633">
                           <i class="fa-solid fa-star"></i>
@@ -947,7 +954,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide custom-slide">
                       <div class="review-card border rounded-4 p-4">
                         <div class="stars mb-2" style="color: #ffc633">
                           <i class="fa-solid fa-star"></i>
@@ -975,7 +982,7 @@
                         </p>
                       </div>
                     </div>
-                    <div class="swiper-slide">
+                    <div class="swiper-slide custom-slide">
                       <div class="review-card border rounded-4 p-4">
                         <div class="stars mb-2" style="color: #ffc633">
                           <i class="fa-solid fa-star"></i>
@@ -1007,6 +1014,289 @@
                 </div>
               </div>
             </section>
+            <!-- Footer Section -->
+            <footer class="footer position-relative mt-5 pt-5 pb-0">
+              <div class="footer-main w-100">
+                <div class="row g-4 mb-5">
+                  <!-- Brand & Description -->
+                  <div class="col-12 col-lg-3 pe-lg-4 mb-4 mb-lg-0">
+                    <h2 class="font-brand-bold text-black mb-4">SHOP.CO</h2>
+                    <p
+                      class="font-primary-regular text-secondary mb-4"
+                      style="font-size: 14px; line-height: 1.6"
+                    >
+                      We have clothes that suits your style and which you're
+                      proud to wear. From women to men.
+                    </p>
+                    <div class="social-icons d-flex gap-3">
+                      <a
+                        href="#"
+                        class="d-flex align-items-center justify-content-center bg-white border border-dark border-opacity-10 rounded-circle text-dark footer-social-icon"
+                        ><i class="fa-brands fa-twitter"></i
+                      ></a>
+                      <a
+                        href="#"
+                        class="d-flex align-items-center justify-content-center bg-black rounded-circle text-white footer-social-icon"
+                        ><i class="fa-brands fa-facebook-f"></i
+                      ></a>
+                      <a
+                        href="#"
+                        class="d-flex align-items-center justify-content-center bg-white border border-dark border-opacity-10 rounded-circle text-dark footer-social-icon"
+                        ><i class="fa-brands fa-instagram"></i
+                      ></a>
+                      <a
+                        href="#"
+                        class="d-flex align-items-center justify-content-center bg-white border border-dark border-opacity-10 rounded-circle text-dark footer-social-icon"
+                        ><i class="fa-brands fa-github"></i
+                      ></a>
+                    </div>
+                  </div>
+
+                  <!-- Links Columns -->
+                  <div class="col-6 col-sm-6 col-md-3 col-lg-2 offset-lg-1">
+                    <h5
+                      class="font-primary-medium text-black text-uppercase mb-4"
+                      style="font-size: 16px; letter-spacing: 2px"
+                    >
+                      COMPANY
+                    </h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >About</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Features</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Works</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Career</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 col-lg-2">
+                    <h5
+                      class="font-primary-medium text-black text-uppercase mb-4"
+                      style="font-size: 16px; letter-spacing: 2px"
+                    >
+                      HELP
+                    </h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Customer Support</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Delivery Details</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Terms & Conditions</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Privacy Policy</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 col-lg-2 mt-4 mt-md-0">
+                    <h5
+                      class="font-primary-medium text-black text-uppercase mb-4"
+                      style="font-size: 16px; letter-spacing: 2px"
+                    >
+                      FAQ
+                    </h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Account</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Manage Deliveries</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Orders</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Payments</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="col-6 col-sm-6 col-md-3 col-lg-2 mt-4 mt-md-0">
+                    <h5
+                      class="font-primary-medium text-black text-uppercase mb-4"
+                      style="font-size: 16px; letter-spacing: 2px"
+                    >
+                      RESOURCES
+                    </h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Free eBooks</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Development Tutorial</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >How to - Blog</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="text-decoration-none text-secondary font-primary-regular footer-link"
+                          >Youtube Playlist</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Footer Bottom -->
+                <div
+                  class="row align-items-center border-top border-dark border-opacity-10 pt-4 pb-4"
+                >
+                  <div
+                    class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0"
+                  >
+                    <p
+                      class="font-primary-regular text-secondary mb-0"
+                      style="font-size: 14px"
+                    >
+                      Shop.co © 2000-2023, All Rights Reserved
+                    </p>
+                  </div>
+                  <div
+                    class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end gap-2"
+                  >
+                    <div class="bg-white border rounded px-2 py-1">
+                      <i class="fa-brands fa-cc-visa text-primary fs-5"></i>
+                    </div>
+                    <div class="bg-white border rounded px-2 py-1">
+                      <i
+                        class="fa-brands fa-cc-mastercard text-danger fs-5"
+                      ></i>
+                    </div>
+                    <div class="bg-white border rounded px-2 py-1">
+                      <i class="fa-brands fa-cc-paypal text-primary fs-5"></i>
+                    </div>
+                    <div class="bg-white border rounded px-2 py-1">
+                      <i class="fa-brands fa-apple fs-5"></i>
+                    </div>
+                    <div class="bg-white border rounded px-2 py-1">
+                      <i class="fa-brands fa-google-pay fs-5"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="footer-newsletter position-absolute"
+                style="top: 0; left: 0; right: 0; transform: translateY(-50%)"
+              >
+                <div
+                  class="newsletter-box bg-black rounded-4 p-4 p-md-5 mx-auto z-1"
+                >
+                  <div class="row align-items-center">
+                    <div class="col-12 col-lg-7 mb-4 mb-lg-0">
+                      <h2
+                        class="font-brand-bold text-white text-uppercase mb-0"
+                        style="
+                          font-size: clamp(2rem, 4vw, 2.5rem);
+                          max-width: 500px;
+                          line-height: 1.1;
+                        "
+                      >
+                        STAY UPTO DATE ABOUT OUR LATEST OFFERS
+                      </h2>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                      <form class="d-flex flex-column gap-3">
+                        <div
+                          class="input-group bg-white rounded-pill overflow-hidden px-3 py-1"
+                        >
+                          <span
+                            class="input-group-text bg-transparent border-0 text-secondary"
+                            style="padding-right: 8px"
+                            ><i class="fa-regular fa-envelope"></i
+                          ></span>
+                          <input
+                            type="email"
+                            class="form-control border-0 shadow-none font-primary-regular"
+                            placeholder="Enter your email address"
+                            style="padding-left: 0"
+                          />
+                        </div>
+                        <button
+                          type="submit"
+                          class="btn btn-light rounded-pill font-primary-medium py-2 text-black fw-bold"
+                        >
+                          Subscribe to Newsletter
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
           </main>
         </div>
       </div>
