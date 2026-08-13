@@ -442,7 +442,7 @@ header {
 
 .reviews-section {
   position: relative;
-  margin: 32px 0px 90px 0px;
+  margin: 32px 0px 150px 0px;
 }
 .reviews-section::before,
 .reviews-section::after {
@@ -563,8 +563,13 @@ header {
     font-size: 12px !important;
   }
   .banner-title {
-    font-size: 36px;
+    font-size: 36px !important;
     margin-bottom: 20px !important;
+  }
+  .new-arrivals-title.banner-title,
+  .browse-title {
+    font-size: 32px !important;
+    line-height: 36px !important;
   }
   .banner-text {
     margin-bottom: 24px !important;
@@ -723,7 +728,7 @@ header {
   }
   .reviews-section {
     margin-top: 50px !important;
-    margin-bottom: 130px !important;
+    margin-bottom: 150px !important;
   }
   .reviews-section::before,
   .reviews-section::after {
