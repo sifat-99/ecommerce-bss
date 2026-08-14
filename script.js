@@ -96,6 +96,8 @@ const maxVal = document.getElementById('value-max');
 const track = document.querySelector('.slider-track');
 
 function updateSlider() {
+    if (!minSlider || !maxSlider || !minVal || !maxVal || !track) return;
+
     if (parseInt(minSlider.value) >= parseInt(maxSlider.value)) {
         minSlider.value = maxSlider.value - 1;
     }
@@ -112,9 +114,11 @@ function updateSlider() {
     track.style.background = `linear-gradient(to right, #ddd ${percent1}%, var(--text-primary) ${percent1}%, var(--text-primary) ${percent2}%, #ddd ${percent2}%)`;
 }
 
-minSlider.addEventListener('input', updateSlider);
-maxSlider.addEventListener('input', updateSlider);
-updateSlider();
+if (minSlider && maxSlider && minVal && maxVal && track) {
+    minSlider.addEventListener('input', updateSlider);
+    maxSlider.addEventListener('input', updateSlider);
+    updateSlider();
+}
 
 const openFilterBtn = document.getElementById('open-filter-btn');
 const closeFilterBtn = document.getElementById('close-filter-btn');
@@ -144,3 +148,27 @@ if (closeFilterBtn) {
 if (filterOverlayMobile) {
     filterOverlayMobile.addEventListener('click', closeFilter);
 }
+
+
+
+const quantityContainers = document.querySelectorAll(".cart-quantity-btn");
+
+quantityContainers.forEach(container => {
+    const minusBtn = container.querySelector("button:first-of-type");
+    const plusBtn = container.querySelector("button:last-of-type");
+    const quantitySpan = container.querySelector("span");
+
+    if (plusBtn && minusBtn && quantitySpan) {
+        plusBtn.addEventListener("click", () => {
+            let number = Number.parseInt(quantitySpan.innerHTML, 10) || 0;
+            quantitySpan.innerHTML = number + 1;
+        });
+
+        minusBtn.addEventListener("click", () => {
+            let number = Number.parseInt(quantitySpan.innerHTML, 10) || 0;
+            if (number > 0) {
+                quantitySpan.innerHTML = number - 1;
+            }
+        });
+    }
+});
