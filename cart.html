@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro/dist/css/coreui.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Shop.co</title>
+    <link rel="shortcut icon" href="./images/SHOP.CO.png" type="image/x-icon" />
+
+</head>
+
+<body>
+    <nav class="remove-nav d-flex bg-black text-white py-2 position-relative">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="nav-message text-center font-primary-regular">
+                Sign up and get 20% off to your first order.
+                <a href="#" class="text-white fw-semibold text-decoration-underline ms-1 font-primary-medium">Sign Up
+                    Now</a>
+            </div>
+            <div class="nav-close-message position-absolute end-0 me-3 me-md-4 cursor-pointer">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </nav>
+    <div class="swiper app-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide app-menu-slide bg-white">
+                <div class="p-3 border-bottom d-flex justify-content-between align-items-center">
+                    <span class="m-0" style="width: 160px; height: 34px">
+                        <img src="./images/SHOP.CO.png" alt="" height="100%" width="100%" style="object-fit: contain" />
+                    </span>
+                    <button class="btn btn-close shadow-none" id="close-menu"></button>
+                </div>
+                <div class="px-4 py-3">
+                    <ul class="list-unstyled d-flex flex-column gap-3 fs-5 fw-medium">
+                        <li class="dropdown w-100">
+                            <a class="text-decoration-none text-dark d-flex justify-content-between align-items-center w-100"
+                                data-bs-toggle="collapse" href="#mobileShopCollapse">
+                                Shop <i class="fa-solid fa-chevron-down fs-6"></i>
+                            </a>
+                            <div class="collapse mt-2" id="mobileShopCollapse">
+                                <ul class="list-unstyled ms-3 d-flex flex-column gap-2 fs-6 fw-normal text-secondary">
+                                    <li>
+                                        <a href="catalog.html" class="text-decoration-none text-secondary">Men's
+                                            Clothes</a>
+                                    </li>
+                                    <li>
+                                        <a href="catalog.html" class="text-decoration-none text-secondary">Women's
+                                            Clothes</a>
+                                    </li>
+                                    <li>
+                                        <a href="catalog.html" class="text-decoration-none text-secondary">Kids</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="catalog.html" class="text-decoration-none text-dark">On Sale</a>
+                        </li>
+                        <li>
+                            <a href="catalog.html" class="text-decoration-none text-dark">New Arrivals</a>
+                        </li>
+                        <li>
+                            <a href="catalog.html" class="text-decoration-none text-dark">Brands</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="swiper-slide app-content-slide">
+                <div class="swiper-overlay d-lg-none" id="swiperOverlay"></div>
+                <div class="filter-overlay d-lg-none" id="filterOverlay"></div>
+
+                <header class="bg-white sticky-top">
+                    <div class="d-flex justify-content-between align-items-center h-100 w-100" style="gap: 40px">
+                        <div class="d-flex align-items-center gap-3">
+                            <button
+                                class="btn border-0 p-0 d-flex align-items-center justify-content-center d-lg-none menu-button text-dark fs-4 me-1 shadow-none">
+                                <svg style="margin-top: -4px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="black">
+                                    <path
+                                        d="M21.375 12C21.375 12.2984 21.2565 12.5845 21.0455 12.7955C20.8345 13.0065 20.5484 13.125 20.25 13.125H3.75C3.45163 13.125 3.16548 13.0065 2.9545 12.7955C2.74353 12.5845 2.625 12.2984 2.625 12C2.625 11.7016 2.74353 11.4155 2.9545 11.2045C3.16548 10.9935 3.45163 10.875 3.75 10.875H20.25C20.5484 10.875 20.8345 10.9935 21.0455 11.2045C21.2565 11.4155 21.375 11.7016 21.375 12ZM3.75 7.125H20.25C20.5484 7.125 20.8345 7.00647 21.0455 6.7955C21.2565 6.58452 21.375 6.29837 21.375 6C21.375 5.70163 21.2565 5.41548 21.0455 5.2045C20.8345 4.99353 20.5484 4.875 20.25 4.875H3.75C3.45163 4.875 3.16548 4.99353 2.9545 5.2045C2.74353 5.41548 2.625 5.70163 2.625 6C2.625 6.29837 2.74353 6.58452 2.9545 6.7955C3.16548 7.00647 3.45163 7.125 3.75 7.125ZM20.25 16.875H3.75C3.45163 16.875 3.16548 16.9935 2.9545 17.2045C2.74353 17.4155 2.625 17.7016 2.625 18C2.625 18.2984 2.74353 18.5845 2.9545 18.7955C3.16548 19.0065 3.45163 19.125 3.75 19.125H20.25C20.5484 19.125 20.8345 19.0065 21.0455 18.7955C21.2565 18.5845 21.375 18.2984 21.375 18C21.375 17.7016 21.2565 17.4155 21.0455 17.2045C20.8345 16.9935 20.5484 16.875 20.25 16.875Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+
+                            <a href="index.html" class="text-decoration-none text-dark logo-text pb-1"
+                                style="width: 160px; height: 34px">
+                                <img src="./images/SHOP.CO.png" alt="" height="100%" width="100%"
+                                    style="object-fit: contain" /></a>
+                        </div>
+                        <ul class="desktop-nav-links d-none d-lg-flex list-unstyled m-0 gap-4 align-items-center">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-dark dropdown-toggle custom-dropdown-icon p-0 d-flex align-items-center gap-1"
+                                    href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Shop
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.5306 6.53063L8.5306 11.5306C8.46092 11.6005 8.37813 11.656 8.28696 11.6939C8.1958 11.7317 8.09806 11.7512 7.99935 11.7512C7.90064 11.7512 7.8029 11.7317 7.71173 11.6939C7.62057 11.656 7.53778 11.6005 7.4681 11.5306L2.4681 6.53063C2.3272 6.38973 2.24805 6.19864 2.24805 5.99938C2.24805 5.80012 2.3272 5.60902 2.4681 5.46813C2.60899 5.32723 2.80009 5.24808 2.99935 5.24808C3.19861 5.24808 3.3897 5.32723 3.5306 5.46813L7.99997 9.9375L12.4693 5.4675C12.6102 5.32661 12.8013 5.24745 13.0006 5.24745C13.1999 5.24745 13.391 5.32661 13.5318 5.4675C13.6727 5.6084 13.7519 5.7995 13.7519 5.99875C13.7519 6.19801 13.6727 6.38911 13.5318 6.53L13.5306 6.53063Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                                <ul class="dropdown-menu border-0 shadow-sm mt-3">
+                                    <li>
+                                        <a class="dropdown-item py-2" href="catalog.html">Men's Clothes</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item py-2" href="catalog.html">Women's Clothes</a>
+                                    </li>
+                                    <li><a class="dropdown-item py-2" href="catalog.html">Kids</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="catalog.html">On Sale</a></li>
+                            <li><a href="catalog.html">New Arrivals</a></li>
+                            <li><a href="catalog.html">Brands</a></li>
+                        </ul>
+                        <div class="nav-search-bar d-none d-md-flex flex-grow-1" style="max-width: 600px">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M21.7958 20.2041L17.3436 15.75C18.6785 14.0104 19.3018 11.8282 19.0869 9.64607C18.872 7.4639 17.8352 5.44516 16.1866 3.99937C14.538 2.55357 12.4013 1.78899 10.2097 1.86071C8.01817 1.93244 5.93595 2.8351 4.38546 4.38559C2.83497 5.93608 1.93231 8.0183 1.86058 10.2098C1.78886 12.4014 2.55344 14.5382 3.99924 16.1867C5.44503 17.8353 7.46377 18.8722 9.64594 19.087C11.8281 19.3019 14.0103 18.6787 15.7499 17.3438L20.2058 21.8006C20.3105 21.9053 20.4347 21.9883 20.5714 22.0449C20.7081 22.1016 20.8547 22.1307 21.0027 22.1307C21.1507 22.1307 21.2972 22.1016 21.434 22.0449C21.5707 21.9883 21.6949 21.9053 21.7996 21.8006C21.9042 21.696 21.9872 21.5717 22.0439 21.435C22.1005 21.2983 22.1296 21.1517 22.1296 21.0037C22.1296 20.8558 22.1005 20.7092 22.0439 20.5725C21.9872 20.4358 21.9042 20.3115 21.7996 20.2069L21.7958 20.2041ZM4.12487 10.5C4.12487 9.23915 4.49876 8.0066 5.19925 6.95824C5.89975 5.90988 6.89539 5.09278 8.06026 4.61027C9.22514 4.12776 10.5069 4.00151 11.7436 4.2475C12.9802 4.49348 14.1161 5.10064 15.0077 5.9922C15.8992 6.88376 16.5064 8.01967 16.7524 9.2563C16.9984 10.4929 16.8721 11.7747 16.3896 12.9396C15.9071 14.1045 15.09 15.1001 14.0416 15.8006C12.9933 16.5011 11.7607 16.875 10.4999 16.875C8.80965 16.8733 7.18915 16.2011 5.99398 15.0059C4.79882 13.8107 4.12661 12.1902 4.12487 10.5Z"
+                                    fill="black" fill-opacity="0.4" />
+                            </svg>
+                            <input type="text" placeholder="Search for products..." />
+                        </div>
+
+                        <div class="nav-icons d-flex align-items-center" style="gap: 14px">
+                            <a href="#" class="d-md-none mobile-search-button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M21.7958 20.2041L17.3436 15.75C18.6785 14.0104 19.3018 11.8282 19.0869 9.64607C18.872 7.4639 17.8352 5.44516 16.1866 3.99937C14.538 2.55357 12.4013 1.78899 10.2097 1.86071C8.01817 1.93244 5.93595 2.8351 4.38546 4.38559C2.83497 5.93608 1.93231 8.0183 1.86058 10.2098C1.78886 12.4014 2.55344 14.5382 3.99924 16.1867C5.44503 17.8353 7.46377 18.8722 9.64594 19.087C11.8281 19.3019 14.0103 18.6787 15.7499 17.3438L20.2058 21.8006C20.3105 21.9053 20.4347 21.9883 20.5714 22.0449C20.7081 22.1016 20.8547 22.1307 21.0027 22.1307C21.1507 22.1307 21.2972 22.1016 21.434 22.0449C21.5707 21.9883 21.6949 21.9053 21.7996 21.8006C21.9042 21.696 21.9872 21.5717 22.0439 21.435C22.1005 21.2983 22.1296 21.1517 22.1296 21.0037C22.1296 20.8558 22.1005 20.7092 22.0439 20.5725C21.9872 20.4358 21.9042 20.3115 21.7996 20.2069L21.7958 20.2041ZM4.12487 10.5C4.12487 9.23915 4.49876 8.0066 5.19925 6.95824C5.89975 5.90988 6.89539 5.09278 8.06026 4.61027C9.22514 4.12776 10.5069 4.00151 11.7436 4.2475C12.9802 4.49348 14.1161 5.10064 15.0077 5.9922C15.8992 6.88376 16.5064 8.01967 16.7524 9.2563C16.9984 10.4929 16.8721 11.7747 16.3896 12.9396C15.9071 14.1045 15.09 15.1001 14.0416 15.8006C12.9933 16.5011 11.7607 16.875 10.4999 16.875C8.80965 16.8733 7.18915 16.2011 5.99398 15.0059C4.79882 13.8107 4.12661 12.1902 4.12487 10.5Z"
+                                        fill="black" />
+                                </svg></a>
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                                aria-hidden="true" data-bs-backdrop="false">
+                                <div class="modal-dialog" style="margin-top: 50px;">
+                                    <div class="modal-content"
+                                        style="background: transparent; border: none; box-shadow: none;">
+                                        <div class="nav-search-bar d-flex flex-grow-1 mt-3 position-relative w-100 align-items-center bg-secondary"
+                                            style="max-width: 100%;  border-radius: 62px; padding: 12px 20px">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none" style="flex-shrink: 0;">
+                                                <path
+                                                    d="M21.7958 20.2041L17.3436 15.75C18.6785 14.0104 19.3018 11.8282 19.0869 9.64607C18.872 7.4639 17.8352 5.44516 16.1866 3.99937C14.538 2.55357 12.4013 1.78899 10.2097 1.86071C8.01817 1.93244 5.93595 2.8351 4.38546 4.38559C2.83497 5.93608 1.93231 8.0183 1.86058 10.2098C1.78886 12.4014 2.55344 14.5382 3.99924 16.1867C5.44503 17.8353 7.46377 18.8722 9.64594 19.087C11.8281 19.3019 14.0103 18.6787 15.7499 17.3438L20.2058 21.8006C20.3105 21.9053 20.4347 21.9883 20.5714 22.0449C20.7081 22.1016 20.8547 22.1307 21.0027 22.1307C21.1507 22.1307 21.2972 22.1016 21.434 22.0449C21.5707 21.9883 21.6949 21.9053 21.7996 21.8006C21.9042 21.696 21.9872 21.5717 22.0439 21.435C22.1005 21.2983 22.1296 21.1517 22.1296 21.0037C22.1296 20.8558 22.1005 20.7092 22.0439 20.5725C21.9872 20.4358 21.9042 20.3115 21.7996 20.2069L21.7958 20.2041ZM4.12487 10.5C4.12487 9.23915 4.49876 8.0066 5.19925 6.95824C5.89975 5.90988 6.89539 5.09278 8.06026 4.61027C9.22514 4.12776 10.5069 4.00151 11.7436 4.2475C12.9802 4.49348 14.1161 5.10064 15.0077 5.9922C15.8992 6.88376 16.5064 8.01967 16.7524 9.2563C16.9984 10.4929 16.8721 11.7747 16.3896 12.9396C15.9071 14.1045 15.09 15.1001 14.0416 15.8006C12.9933 16.5011 11.7607 16.875 10.4999 16.875C8.80965 16.8733 7.18915 16.2011 5.99398 15.0059C4.79882 13.8107 4.12661 12.1902 4.12487 10.5Z"
+                                                    fill="black" fill-opacity="0.4" />
+                                            </svg>
+                                            <input type="text" placeholder="Search for products..." autofocus
+                                                style="flex-grow: 1; border: none; outline: none; background: transparent; padding-left: 12px; font-size: 16px; min-width: 0;" />
+                                            <i class="fa-solid fa-xmark text-muted cursor-pointer ms-2"
+                                                data-bs-dismiss="modal" aria-label="Close" style="font-size: 20px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="cart.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M9.375 20.25C9.375 20.6208 9.26503 20.9834 9.059 21.2917C8.85298 21.6 8.56014 21.8404 8.21753 21.9823C7.87492 22.1242 7.49792 22.1613 7.1342 22.089C6.77049 22.0166 6.4364 21.838 6.17417 21.5758C5.91195 21.3136 5.73337 20.9795 5.66103 20.6158C5.58868 20.2521 5.62581 19.8751 5.76773 19.5325C5.90964 19.1899 6.14996 18.897 6.45831 18.691C6.76665 18.485 7.12916 18.375 7.5 18.375C7.99728 18.375 8.47419 18.5725 8.82582 18.9242C9.17745 19.2758 9.375 19.7527 9.375 20.25ZM17.25 18.375C16.8792 18.375 16.5166 18.485 16.2083 18.691C15.9 18.897 15.6596 19.1899 15.5177 19.5325C15.3758 19.8751 15.3387 20.2521 15.411 20.6158C15.4834 20.9795 15.662 21.3136 15.9242 21.5758C16.1864 21.838 16.5205 22.0166 16.8842 22.089C17.2479 22.1613 17.6249 22.1242 17.9675 21.9823C18.3101 21.8404 18.603 21.6 18.809 21.2917C19.015 20.9834 19.125 20.6208 19.125 20.25C19.125 19.7527 18.9275 19.2758 18.5758 18.9242C18.2242 18.5725 17.7473 18.375 17.25 18.375ZM22.0753 7.08094L19.5169 15.3966C19.3535 15.9343 19.0211 16.4051 18.569 16.739C18.1169 17.0729 17.5692 17.2521 17.0072 17.25H7.77469C7.2046 17.2482 6.65046 17.0616 6.1953 16.7183C5.74015 16.3751 5.40848 15.8936 5.25 15.3459L2.04469 4.125H1.125C0.826631 4.125 0.540483 4.00647 0.329505 3.7955C0.118526 3.58452 0 3.29837 0 3C0 2.70163 0.118526 2.41548 0.329505 2.2045C0.540483 1.99353 0.826631 1.875 1.125 1.875H2.32687C2.73407 1.87626 3.12988 2.00951 3.45493 2.25478C3.77998 2.50004 4.01674 2.84409 4.12969 3.23531L4.81312 5.625H21C21.1761 5.62499 21.3497 5.6663 21.5069 5.74561C21.664 5.82492 21.8004 5.94001 21.905 6.08164C22.0096 6.22326 22.0795 6.38746 22.1091 6.56102C22.1387 6.73458 22.1271 6.91266 22.0753 7.08094ZM19.4766 7.875H5.45531L7.41375 14.7281C7.43617 14.8065 7.48354 14.8755 7.54867 14.9245C7.6138 14.9736 7.69315 15.0001 7.77469 15H17.0072C17.0875 15.0002 17.1656 14.9746 17.2303 14.927C17.2949 14.8794 17.3426 14.8123 17.3662 14.7356L19.4766 7.875Z"
+                                        fill="black" />
+                                </svg></a>
+                            <a class="extra-responsive" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                        d="M12 1.875C9.99747 1.875 8.0399 2.46882 6.37486 3.58137C4.70981 4.69392 3.41206 6.27523 2.64572 8.12533C1.87939 9.97543 1.67888 12.0112 2.06955 13.9753C2.46023 15.9393 3.42454 17.7435 4.84055 19.1595C6.25656 20.5755 8.06066 21.5398 10.0247 21.9305C11.9888 22.3211 14.0246 22.1206 15.8747 21.3543C17.7248 20.5879 19.3061 19.2902 20.4186 17.6251C21.5312 15.9601 22.125 14.0025 22.125 12C22.122 9.3156 21.0543 6.74199 19.1562 4.84383C17.258 2.94567 14.6844 1.87798 12 1.875ZM7.45969 18.4284C7.98195 17.7143 8.66528 17.1335 9.45418 16.7331C10.2431 16.3327 11.1153 16.124 12 16.124C12.8847 16.124 13.7569 16.3327 14.5458 16.7331C15.3347 17.1335 16.0181 17.7143 16.5403 18.4284C15.2134 19.3695 13.6268 19.875 12 19.875C10.3732 19.875 8.78665 19.3695 7.45969 18.4284ZM9.375 11.25C9.375 10.7308 9.52896 10.2233 9.8174 9.79163C10.1058 9.35995 10.5158 9.0235 10.9955 8.82482C11.4751 8.62614 12.0029 8.57415 12.5121 8.67544C13.0213 8.77672 13.489 9.02673 13.8562 9.39384C14.2233 9.76096 14.4733 10.2287 14.5746 10.7379C14.6759 11.2471 14.6239 11.7749 14.4252 12.2545C14.2265 12.7342 13.8901 13.1442 13.4584 13.4326C13.0267 13.721 12.5192 13.875 12 13.875C11.3038 13.875 10.6361 13.5984 10.1438 13.1062C9.65157 12.6139 9.375 11.9462 9.375 11.25ZM18.1875 16.8694C17.4583 15.9419 16.5289 15.1914 15.4688 14.6737C16.1444 13.9896 16.6026 13.1208 16.7858 12.1769C16.9689 11.2329 16.8688 10.2558 16.498 9.36861C16.1273 8.4814 15.5024 7.72364 14.702 7.19068C13.9017 6.65771 12.9616 6.37334 12 6.37334C11.0384 6.37334 10.0983 6.65771 9.29797 7.19068C8.49762 7.72364 7.87275 8.4814 7.50198 9.36861C7.13121 10.2558 7.0311 11.2329 7.21424 12.1769C7.39739 13.1208 7.85561 13.9896 8.53125 14.6737C7.4711 15.1914 6.54168 15.9419 5.8125 16.8694C4.89661 15.7083 4.32614 14.3129 4.1664 12.8427C4.00665 11.3725 4.2641 9.88711 4.90925 8.55644C5.55441 7.22578 6.5612 6.10366 7.81439 5.31855C9.06757 4.53343 10.5165 4.11703 11.9953 4.11703C13.4741 4.11703 14.9231 4.53343 16.1762 5.31855C17.4294 6.10366 18.4362 7.22578 19.0814 8.55644C19.7265 9.88711 19.984 11.3725 19.8242 12.8427C19.6645 14.3129 19.094 15.7083 18.1781 16.8694H18.1875Z"
+                                        fill="black" />
+                                </svg></a>
+                        </div>
+                    </div>
+                </header>
+
+                <main>
+                    <hr class="hr" />
+
+                    <section class="bread-crumb-container mt-4">
+                        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                            <ol class="breadcrumb" style="gap: 6px;">
+                                <li class="breadcrumb-item">
+                                    <a style="font-size: 16px; text-decoration: none"
+                                        class="font-primary-regular text-secondary" href="#">Home</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    <a style="font-size: 16px; text-decoration: none"
+                                        class="font-primary-regular text-primary" href="#">Cart</a>
+                                </li>
+                            </ol>
+                        </nav>
+                    </section>
+
+                    <section class="cart-section">
+                        <h2 class="cart-title font-brand-extrabold" style="font-size: 40px !important;">
+                            Your Cart
+                        </h2>
+
+                        <div class="cart-content row g-4">
+                            <div class="col-12 col-lg-7 ">
+                                <div class="border cart-page-left" style="
+                                    border-radius: 20px;
+                                    border: 1px solid var(--border-primary);
+                                    padding: 20px 24px ;
+                                ">
+                                    <div class="cart-card d-flex justify-content-between align-items-stretch "
+                                        style="min-height: 124px !important;  max-height: 150px !important;">
+                                        <div class="cart-card-info-left d-flex">
+                                            <img src="./images/cart images/image 1.png" alt="">
+                                            <div class="left-details d-flex flex-column" style="gap: 16px !important;">
+                                                <div class="d-flex flex-column card-information" style="gap: 4px;">
+                                                    <h2 class="cart-product-title">Gradient Graphic T-shirt</h2>
+                                                    <p>Size: <span class="text-secondary">Large</span></p>
+                                                    <p>Color: <span class="text-secondary">White</span></p>
+                                                </div>
+                                                <p class="cart-price"> <span
+                                                        class="text-primary flex-grow-1">$500</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            class="cart-card-info-right d-flex flex-column align-items-end justify-content-between flex-grow-1 align-self-stretch">
+                                            <div class="delete-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M20.25 4.5H16.5V3.75C16.5 3.15326 16.2629 2.58097 15.841 2.15901C15.419 1.73705 14.8467 1.5 14.25 1.5H9.75C9.15326 1.5 8.58097 1.73705 8.15901 2.15901C7.73705 2.58097 7.5 3.15326 7.5 3.75V4.5H3.75C3.55109 4.5 3.36032 4.57902 3.21967 4.71967C3.07902 4.86032 3 5.05109 3 5.25C3 5.44891 3.07902 5.63968 3.21967 5.78033C3.36032 5.92098 3.55109 6 3.75 6H4.5V19.5C4.5 19.8978 4.65804 20.2794 4.93934 20.5607C5.22064 20.842 5.60218 21 6 21H18C18.3978 21 18.7794 20.842 19.0607 20.5607C19.342 20.2794 19.5 19.8978 19.5 19.5V6H20.25C20.4489 6 20.6397 5.92098 20.7803 5.78033C20.921 5.63968 21 5.44891 21 5.25C21 5.05109 20.921 4.86032 20.7803 4.71967C20.6397 4.57902 20.4489 4.5 20.25 4.5ZM10.5 15.75C10.5 15.9489 10.421 16.1397 10.2803 16.2803C10.1397 16.421 9.94891 16.5 9.75 16.5C9.55109 16.5 9.36032 16.421 9.21967 16.2803C9.07902 16.1397 9 15.9489 9 15.75V9.75C9 9.55109 9.07902 9.36032 9.21967 9.21967C9.36032 9.07902 9.55109 9 9.75 9C9.94891 9 10.1397 9.07902 10.2803 9.21967C10.421 9.36032 10.5 9.55109 10.5 9.75V15.75ZM15 15.75C15 15.9489 14.921 16.1397 14.7803 16.2803C14.6397 16.421 14.4489 16.5 14.25 16.5C14.0511 16.5 13.8603 16.421 13.7197 16.2803C13.579 16.1397 13.5 15.9489 13.5 15.75V9.75C13.5 9.55109 13.579 9.36032 13.7197 9.21967C13.8603 9.07902 14.0511 9 14.25 9C14.4489 9 14.6397 9.07902 14.7803 9.21967C14.921 9.36032 15 9.55109 15 9.75V15.75ZM15 4.5H9V3.75C9 3.55109 9.07902 3.36032 9.21967 3.21967C9.36032 3.07902 9.55109 3 9.75 3H14.25C14.4489 3 14.6397 3.07902 14.7803 3.21967C14.921 3.36032 15 3.55109 15 3.75V4.5Z"
+                                                        fill="#FF3333" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn-group cart-quantity-btn rounded-pill overflow-hidden d-flex align-items-center justify-content-between px-3 px-md-4 bg-secondary mt-auto"
+                                                role="group">
+                                                <button class="btn border-0 shadow-none p-0 text-dark fs-5"><i
+                                                        class="fa-solid fa-minus"></i></button>
+                                                <span class="font-primary-medium fs-5">1</span>
+                                                <button class="btn border-0 shadow-none p-0 text-dark fs-5"><i
+                                                        class="fa-solid fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="cart-card d-flex justify-content-between align-items-stretch "
+                                        style="min-height: 124px !important;  max-height: 150px !important;">
+                                        <div class="cart-card-info-left d-flex">
+                                            <img src="./images/cart images/image 2.png" alt="">
+                                            <div class="left-details d-flex flex-column" style="gap: 16px !important;">
+                                                <div class="d-flex flex-column card-information" style="gap: 4px;">
+                                                    <h2 class="cart-product-title">Checked Shirt</h2>
+                                                    <p>Size: <span class="text-secondary">Medium</span></p>
+                                                    <p>Color: <span class="text-secondary">Red</span></p>
+                                                </div>
+                                                <p class="cart-price"> <span
+                                                        class="text-primary flex-grow-1">$180</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            class="cart-card-info-right d-flex flex-column align-items-end justify-content-between flex-grow-1 align-self-stretch">
+                                            <div class="delete-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M20.25 4.5H16.5V3.75C16.5 3.15326 16.2629 2.58097 15.841 2.15901C15.419 1.73705 14.8467 1.5 14.25 1.5H9.75C9.15326 1.5 8.58097 1.73705 8.15901 2.15901C7.73705 2.58097 7.5 3.15326 7.5 3.75V4.5H3.75C3.55109 4.5 3.36032 4.57902 3.21967 4.71967C3.07902 4.86032 3 5.05109 3 5.25C3 5.44891 3.07902 5.63968 3.21967 5.78033C3.36032 5.92098 3.55109 6 3.75 6H4.5V19.5C4.5 19.8978 4.65804 20.2794 4.93934 20.5607C5.22064 20.842 5.60218 21 6 21H18C18.3978 21 18.7794 20.842 19.0607 20.5607C19.342 20.2794 19.5 19.8978 19.5 19.5V6H20.25C20.4489 6 20.6397 5.92098 20.7803 5.78033C20.921 5.63968 21 5.44891 21 5.25C21 5.05109 20.921 4.86032 20.7803 4.71967C20.6397 4.57902 20.4489 4.5 20.25 4.5ZM10.5 15.75C10.5 15.9489 10.421 16.1397 10.2803 16.2803C10.1397 16.421 9.94891 16.5 9.75 16.5C9.55109 16.5 9.36032 16.421 9.21967 16.2803C9.07902 16.1397 9 15.9489 9 15.75V9.75C9 9.55109 9.07902 9.36032 9.21967 9.21967C9.36032 9.07902 9.55109 9 9.75 9C9.94891 9 10.1397 9.07902 10.2803 9.21967C10.421 9.36032 10.5 9.55109 10.5 9.75V15.75ZM15 15.75C15 15.9489 14.921 16.1397 14.7803 16.2803C14.6397 16.421 14.4489 16.5 14.25 16.5C14.0511 16.5 13.8603 16.421 13.7197 16.2803C13.579 16.1397 13.5 15.9489 13.5 15.75V9.75C13.5 9.55109 13.579 9.36032 13.7197 9.21967C13.8603 9.07902 14.0511 9 14.25 9C14.4489 9 14.6397 9.07902 14.7803 9.21967C14.921 9.36032 15 9.55109 15 9.75V15.75ZM15 4.5H9V3.75C9 3.55109 9.07902 3.36032 9.21967 3.21967C9.36032 3.07902 9.55109 3 9.75 3H14.25C14.4489 3 14.6397 3.07902 14.7803 3.21967C14.921 3.36032 15 3.55109 15 3.75V4.5Z"
+                                                        fill="#FF3333" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn-group cart-quantity-btn rounded-pill overflow-hidden d-flex align-items-center justify-content-between px-3 px-md-4 bg-secondary mt-auto"
+                                                role="group">
+                                                <button class="btn border-0 shadow-none p-0 text-dark fs-5"><i
+                                                        class="fa-solid fa-minus"></i></button>
+                                                <span class="font-primary-medium fs-5">1</span>
+                                                <button class="btn border-0 shadow-none p-0 text-dark fs-5"><i
+                                                        class="fa-solid fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="cart-card d-flex justify-content-between align-items-stretch "
+                                        style="min-height: 124px !important; max-height: 150px !important;">
+                                        <div class="cart-card-info-left d-flex">
+                                            <img src="./images/cart images/image 3.png" alt="">
+                                            <div class="left-details d-flex flex-column" style="gap: 16px !important;">
+                                                <div class="d-flex flex-column card-information" style="gap: 4px;">
+                                                    <h2 class="cart-product-titl  e">Skinny Fit Jeans</h2>
+                                                    <p>Size: <span class="text-secondary">Large</span></p>
+                                                    <p>Color: <span class="text-secondary">Blue</span></p>
+                                                </div>
+                                                <p class="cart-price"> <span
+                                                        class="text-primary flex-grow-1">$240</span>
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                        <div
+                                            class="cart-card-info-right d-flex flex-column align-items-end justify-content-between flex-grow-1 align-self-stretch">
+                                            <div class="delete-btn">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M20.25 4.5H16.5V3.75C16.5 3.15326 16.2629 2.58097 15.841 2.15901C15.419 1.73705 14.8467 1.5 14.25 1.5H9.75C9.15326 1.5 8.58097 1.73705 8.15901 2.15901C7.73705 2.58097 7.5 3.15326 7.5 3.75V4.5H3.75C3.55109 4.5 3.36032 4.57902 3.21967 4.71967C3.07902 4.86032 3 5.05109 3 5.25C3 5.44891 3.07902 5.63968 3.21967 5.78033C3.36032 5.92098 3.55109 6 3.75 6H4.5V19.5C4.5 19.8978 4.65804 20.2794 4.93934 20.5607C5.22064 20.842 5.60218 21 6 21H18C18.3978 21 18.7794 20.842 19.0607 20.5607C19.342 20.2794 19.5 19.8978 19.5 19.5V6H20.25C20.4489 6 20.6397 5.92098 20.7803 5.78033C20.921 5.63968 21 5.44891 21 5.25C21 5.05109 20.921 4.86032 20.7803 4.71967C20.6397 4.57902 20.4489 4.5 20.25 4.5ZM10.5 15.75C10.5 15.9489 10.421 16.1397 10.2803 16.2803C10.1397 16.421 9.94891 16.5 9.75 16.5C9.55109 16.5 9.36032 16.421 9.21967 16.2803C9.07902 16.1397 9 15.9489 9 15.75V9.75C9 9.55109 9.07902 9.36032 9.21967 9.21967C9.36032 9.07902 9.55109 9 9.75 9C9.94891 9 10.1397 9.07902 10.2803 9.21967C10.421 9.36032 10.5 9.55109 10.5 9.75V15.75ZM15 15.75C15 15.9489 14.921 16.1397 14.7803 16.2803C14.6397 16.421 14.4489 16.5 14.25 16.5C14.0511 16.5 13.8603 16.421 13.7197 16.2803C13.579 16.1397 13.5 15.9489 13.5 15.75V9.75C13.5 9.55109 13.579 9.36032 13.7197 9.21967C13.8603 9.07902 14.0511 9 14.25 9C14.4489 9 14.6397 9.07902 14.7803 9.21967C14.921 9.36032 15 9.55109 15 9.75V15.75ZM15 4.5H9V3.75C9 3.55109 9.07902 3.36032 9.21967 3.21967C9.36032 3.07902 9.55109 3 9.75 3H14.25C14.4489 3 14.6397 3.07902 14.7803 3.21967C14.921 3.36032 15 3.55109 15 3.75V4.5Z"
+                                                        fill="#FF3333" />
+                                                </svg>
+                                            </div>
+                                            <div class="btn-group cart-quantity-btn rounded-pill overflow-hidden d-flex align-items-center justify-content-between px-3 px-md-4 bg-secondary mt-auto"
+                                                role="group">
+                                                <button class="btn border-0 shadow-none p-0 text-dark fs-5"><i
+                                                        class="fa-solid fa-minus"></i></button>
+                                                <span class="font-primary-medium fs-5">1</span>
+                                                <button class="btn border-0 shadow-none p-0 text-dark fs-5"><i
+                                                        class="fa-solid fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-5">
+                                <div class="border cart-page-right" style="
+                                    border-radius: 20px;
+                                    border: 1px solid var(--border-primary);
+                                    padding: 20px 24px ;
+                                ">
+                                    <p class="cart-summary-title">
+                                        Order Summary
+                                    </p>
+
+                                    <div class="summary-details">
+                                        <div class="d-flex justify-content-between">
+                                            <p class="cart-summary-label">Subtotal</p>
+                                            <p class="cart-summary-value">$565</p>
+                                        </div>
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="cart-summary-label">Discount</p>
+                                            <p class="cart-summary-value text-danger">-$113</p>
+                                        </div>
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="cart-summary-label">Delivery Fee</p>
+                                            <p class="cart-summary-value">$15</p>
+                                        </div>
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <p class="cart-summary-label">Total</p>
+                                            <p class="cart-summary-value">$467</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="summary-promo-box d-flex align-items-center mt-4" style="gap: 12px;">
+                                        <div class="input-box bg-secondary rounded-pill d-flex align-items-center flex-grow-1 px-3"
+                                            style="height: 48px;">
+                                            <span class="promo-icon text-muted me-2 d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                    viewBox="0 0 24 24" fill="none">
+                                                    <path
+                                                        d="M23.0766 12.4856L13.7653 3.17438C13.5917 2.99963 13.3851 2.86109 13.1576 2.76679C12.93 2.67248 12.686 2.62429 12.4397 2.62501H3.75001C3.45164 2.62501 3.16549 2.74353 2.95451 2.95451C2.74353 3.16549 2.62501 3.45164 2.62501 3.75001V12.4397C2.62429 12.686 2.67248 12.93 2.76679 13.1576C2.86109 13.3851 2.99963 13.5917 3.17438 13.7653L12.4856 23.0766C12.8372 23.4281 13.3141 23.6255 13.8113 23.6255C14.3084 23.6255 14.7853 23.4281 15.1369 23.0766L23.0766 15.1369C23.4281 14.7853 23.6255 14.3084 23.6255 13.8113C23.6255 13.3141 23.4281 12.8372 23.0766 12.4856ZM13.8113 21.2203L4.87501 12.2813V4.87501H12.2813L21.2175 13.8113L13.8113 21.2203ZM9.37501 7.87501C9.37501 8.17168 9.28703 8.46169 9.12221 8.70836C8.95739 8.95504 8.72312 9.1473 8.44903 9.26083C8.17494 9.37436 7.87334 9.40406 7.58237 9.34619C7.2914 9.28831 7.02413 9.14545 6.81435 8.93567C6.60457 8.72589 6.46171 8.45861 6.40383 8.16764C6.34595 7.87667 6.37566 7.57507 6.48919 7.30098C6.60272 7.02689 6.79498 6.79263 7.04165 6.6278C7.28833 6.46298 7.57834 6.37501 7.87501 6.37501C8.27283 6.37501 8.65436 6.53304 8.93567 6.81435C9.21697 7.09565 9.37501 7.47718 9.37501 7.87501Z"
+                                                        fill="black" fill-opacity="0.4" />
+                                                </svg>
+                                            </span>
+                                            <input type="text" placeholder="Add promo code"
+                                                class="summary-promo-input bg-transparent border-0 flex-grow-1 shadow-none"
+                                                style="outline: none;">
+                                        </div>
+                                        <button
+                                            class="summary-promo-btn btn rounded-pill px-4 text-white font-primary-medium"
+                                            style="height: 48px; min-width: 100px;">Apply</button>
+                                    </div>
+                                    <button
+                                        class="btn summary-promo-btn rounded-pill w-100 d-flex justify-content-center align-items-center gap-2 mt-4 font-primary-medium"
+                                        style="height: 54px; font-size: 16px;">
+                                        Go to Checkout <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!-- Footer Section -->
+                    <footer class="footer position-relative pt-5 pb-0" style="margin-top: 200px">
+                        <div class="footer-main w-100">
+                            <div class="row g-4 mb-5">
+                                <!-- Brand & Description -->
+                                <div class="col-12 col-lg-3 pe-lg-4 mb-4 mb-lg-0">
+                                    <h2 class="font-brand-bold text-black mb-4">SHOP.CO</h2>
+                                    <p class="font-primary-regular text-secondary mb-4"
+                                        style="font-size: 14px; line-height: 1.6">
+                                        We have clothes that suits your style and which you're
+                                        proud to wear. From women to men.
+                                    </p>
+                                    <div class="social-icons d-flex gap-3">
+                                        <a href="#"
+                                            class="d-flex align-items-center justify-content-center bg-white border border-dark border-opacity-10 rounded-circle text-dark footer-social-icon"><i
+                                                class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"
+                                            class="d-flex align-items-center justify-content-center bg-white rounded-circle text-black footer-social-icon"><i
+                                                class="fa-brands fa-facebook-f"></i></a>
+                                        <a href="#"
+                                            class="d-flex align-items-center justify-content-center bg-white border border-dark border-opacity-10 rounded-circle text-dark footer-social-icon"><i
+                                                class="fa-brands fa-instagram"></i></a>
+                                        <a href="#"
+                                            class="d-flex align-items-center justify-content-center bg-white border border-dark border-opacity-10 rounded-circle text-dark footer-social-icon"><i
+                                                class="fa-brands fa-github"></i></a>
+                                    </div>
+                                </div>
+
+                                <!-- Links Columns -->
+                                <div class="col-6 col-sm-6 col-md-3 col-lg-2 offset-lg-1">
+                                    <h5 class="font-primary-medium text-black text-uppercase mb-4"
+                                        style="font-size: 16px; letter-spacing: 2px">
+                                        COMPANY
+                                    </h5>
+                                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">About</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Features</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Works</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Career</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-6 col-sm-6 col-md-3 col-lg-2">
+                                    <h5 class="font-primary-medium text-black text-uppercase mb-4"
+                                        style="font-size: 16px; letter-spacing: 2px">
+                                        HELP
+                                    </h5>
+                                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Customer
+                                                Support</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Delivery
+                                                Details</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Terms
+                                                & Conditions</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Privacy
+                                                Policy</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-6 col-sm-6 col-md-3 col-lg-2 mt-4">
+                                    <h5 class="font-primary-medium text-black text-uppercase mb-4"
+                                        style="font-size: 16px; letter-spacing: 2px">
+                                        FAQ
+                                    </h5>
+                                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Account</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Manage
+                                                Deliveries</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Orders</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Payments</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-6 col-sm-6 col-md-3 col-lg-2 mt-4">
+                                    <h5 class="font-primary-medium text-black text-uppercase mb-4"
+                                        style="font-size: 16px; letter-spacing: 2px">
+                                        RESOURCES
+                                    </h5>
+                                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Free
+                                                eBooks</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Development
+                                                Tutorial</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">How
+                                                to - Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"
+                                                class="text-decoration-none text-secondary font-primary-regular footer-link">Youtube
+                                                Playlist</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Footer Bottom -->
+                            <div class="row align-items-center border-top border-dark border-opacity-10 pt-4 pb-4">
+                                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                    <p class="font-primary-regular text-secondary mb-0" style="font-size: 14px">
+                                        Shop.co © 2026, All Rights Reserved
+                                    </p>
+                                </div>
+                                <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end gap-2">
+                                    <div class="bg-white border rounded px-2 py-1" style="cursor: pointer">
+                                        <i class="fa-brands fa-cc-visa text-primary fs-5"></i>
+                                    </div>
+                                    <div class="bg-white border rounded px-2 py-1" style="cursor: pointer">
+                                        <i class="fa-brands fa-cc-mastercard text-danger fs-5"></i>
+                                    </div>
+                                    <div class="bg-white border rounded px-2 py-1" style="cursor: pointer">
+                                        <i class="fa-brands fa-cc-paypal text-primary fs-5"></i>
+                                    </div>
+                                    <div class="bg-white border rounded px-2 py-1" style="cursor: pointer">
+                                        <i class="fa-brands fa-apple fs-5"></i>
+                                    </div>
+                                    <div class="bg-white border rounded px-2 py-1" style="cursor: pointer">
+                                        <i class="fa-brands fa-google-pay fs-5"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-newsletter position-absolute"
+                            style="top: 0; left: 0; right: 0; transform: translateY(-50%)">
+                            <div class="newsletter-box bg-black rounded-4 p-4 p-md-5 mx-auto z-1">
+                                <div class="row align-items-center">
+                                    <div class="col-12 col-lg-7 mb-4 mb-lg-0">
+                                        <h2 class="font-brand-bold text-white text-uppercase mb-0" style="
+                          font-size: clamp(2rem, 4vw, 2.5rem);
+                          max-width: 500px;
+                          line-height: 1.1;
+                        ">
+                                            STAY UPTO DATE ABOUT OUR LATEST OFFERS
+                                        </h2>
+                                    </div>
+                                    <div class="col-12 col-lg-5">
+                                        <form class="d-flex flex-column gap-3">
+                                            <div class="input-group bg-white rounded-pill overflow-hidden px-3 py-1">
+                                                <span class="input-group-text bg-transparent border-0 text-secondary"
+                                                    style="padding-right: 8px"><i
+                                                        class="fa-regular fa-envelope"></i></span>
+                                                <input type="email"
+                                                    class="form-control border-0 shadow-none font-primary-regular"
+                                                    placeholder="Enter your email address" style="padding-left: 0" />
+                                            </div>
+                                            <button type="submit"
+                                                class="btn btn-light rounded-pill font-primary-medium py-2 text-black fw-bold">
+                                                Subscribe to Newsletter
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@coreui/coreui-pro/dist/js/coreui.bundle.min.js"></script>
+</body>
+
+</html>
