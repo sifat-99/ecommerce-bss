@@ -89,4 +89,58 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+const minSlider = document.getElementById('slider-min');
+const maxSlider = document.getElementById('slider-max');
+const minVal = document.getElementById('value-min');
+const maxVal = document.getElementById('value-max');
+const track = document.querySelector('.slider-track');
 
+function updateSlider() {
+    if (parseInt(minSlider.value) >= parseInt(maxSlider.value)) {
+        minSlider.value = maxSlider.value - 1;
+    }
+
+    minVal.textContent = '$' + minSlider.value;
+    maxVal.textContent = '$' + maxSlider.value;
+
+    const percent1 = (minSlider.value / minSlider.max) * 100;
+    const percent2 = (maxSlider.value / maxSlider.max) * 100;
+
+    minVal.style.left = `calc(${percent1}% + ${12 - percent1 * 0.24}px)`;
+    maxVal.style.left = `calc(${percent2}% + ${12 - percent2 * 0.24}px)`;
+
+    track.style.background = `linear-gradient(to right, #ddd ${percent1}%, var(--text-primary) ${percent1}%, var(--text-primary) ${percent2}%, #ddd ${percent2}%)`;
+}
+
+minSlider.addEventListener('input', updateSlider);
+maxSlider.addEventListener('input', updateSlider);
+updateSlider();
+
+const openFilterBtn = document.getElementById('open-filter-btn');
+const closeFilterBtn = document.getElementById('close-filter-btn');
+const filterSidebar = document.querySelector('.catalog-sidebar');
+const filterOverlayMobile = document.getElementById('filterOverlay');
+
+const openFilter = () => {
+    if (filterSidebar) filterSidebar.classList.add('show');
+    if (filterOverlayMobile) filterOverlayMobile.classList.add('show');
+    document.body.style.overflow = 'hidden';
+};
+
+const closeFilter = () => {
+    if (filterSidebar) filterSidebar.classList.remove('show');
+    if (filterOverlayMobile) filterOverlayMobile.classList.remove('show');
+    document.body.style.overflow = '';
+};
+
+if (openFilterBtn) {
+    openFilterBtn.addEventListener('click', openFilter);
+}
+
+if (closeFilterBtn) {
+    closeFilterBtn.addEventListener('click', closeFilter);
+}
+
+if (filterOverlayMobile) {
+    filterOverlayMobile.addEventListener('click', closeFilter);
+}
