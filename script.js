@@ -151,24 +151,104 @@ if (filterOverlayMobile) {
 
 
 
-const quantityContainers = document.querySelectorAll(".cart-quantity-btn");
-
-quantityContainers.forEach(container => {
-    const minusBtn = container.querySelector("button:first-of-type");
-    const plusBtn = container.querySelector("button:last-of-type");
-    const quantitySpan = container.querySelector("span");
-
-    if (plusBtn && minusBtn && quantitySpan) {
-        plusBtn.addEventListener("click", () => {
-            let number = Number.parseInt(quantitySpan.innerHTML, 10) || 0;
-            quantitySpan.innerHTML = number + 1;
-        });
-
-        minusBtn.addEventListener("click", () => {
+document.addEventListener('click', function (e) {
+    const minusBtn = e.target.closest('.cart-quantity-btn button:first-of-type');
+    if (minusBtn) {
+        const container = minusBtn.closest('.cart-quantity-btn');
+        const quantitySpan = container.querySelector('span');
+        if (quantitySpan) {
             let number = Number.parseInt(quantitySpan.innerHTML, 10) || 0;
             if (number > 0) {
                 quantitySpan.innerHTML = number - 1;
             }
+        }
+        return;
+    }
+
+    const plusBtn = e.target.closest('.cart-quantity-btn button:last-of-type');
+    if (plusBtn) {
+        const container = plusBtn.closest('.cart-quantity-btn');
+        const quantitySpan = container.querySelector('span');
+        if (quantitySpan) {
+            let number = Number.parseInt(quantitySpan.innerHTML, 10) || 0;
+            quantitySpan.innerHTML = number + 1;
+        }
+        return;
+    }
+
+    // Size Selection (Product Details)
+    const sizeBtn = e.target.closest('.choose-size button');
+    if (sizeBtn) {
+        e.preventDefault();
+        const allSizeBtns = document.querySelectorAll('.choose-size button');
+        allSizeBtns.forEach(btn => {
+            btn.classList.remove('btn-dark', 'text-white', 'bg-tertiary');
+            btn.classList.add('bg-secondary', 'text-secondary');
         });
+        sizeBtn.classList.remove('bg-secondary', 'text-secondary');
+        sizeBtn.classList.add('btn-dark', 'text-white', 'bg-tertiary');
+        return;
+    }
+
+    // Color Selection (Product Details)
+    const colorBox = e.target.closest('.colors .color-box');
+    if (colorBox) {
+        e.preventDefault();
+        const allColorBoxes = document.querySelectorAll('.colors .color-box');
+        allColorBoxes.forEach(cb => {
+            const icon = cb.querySelector('.check-icon');
+            if (icon) {
+                icon.remove();
+            }
+            cb.classList.remove('position-relative');
+        });
+
+        colorBox.classList.add('position-relative');
+
+        const checkIconHTML = `
+            <div class="position-absolute check-icon d-flex justify-content-center align-items-center top-0 start-0 w-100 h-100">
+                <i class="fa-solid fa-check text-white" style="font-size: 14px;"></i>
+            </div>
+        `;
+        colorBox.insertAdjacentHTML('beforeend', checkIconHTML);
+        return;
+    }
+
+    // Catalog Size Selection
+    const catalogSizeBtn = e.target.closest('.size-wrapper .size-button');
+    if (catalogSizeBtn) {
+        e.preventDefault();
+        const allCatalogSizeBtns = document.querySelectorAll('.size-wrapper .size-button');
+        allCatalogSizeBtns.forEach(btn => btn.classList.remove('active'));
+        catalogSizeBtn.classList.add('active');
+        return;
+    }
+
+    // Catalog Color Selection
+    const catalogColorSvg = e.target.closest('.color-wrapper svg');
+    if (catalogColorSvg) {
+        e.preventDefault();
+        const allCatalogColorSvgs = document.querySelectorAll('.color-wrapper svg');
+
+        allCatalogColorSvgs.forEach(svg => {
+            const path = svg.querySelector('path');
+            if (path) {
+                path.remove();
+            }
+        });
+
+        // Find if the circle is white to make stroke black, otherwise white
+        let strokeColor = "white";
+        const circle = catalogColorSvg.querySelector('circle');
+        if (circle) {
+            const fill = circle.getAttribute('fill');
+            if (fill === 'white' || fill === '#ffffff' || fill === '#FFFFFF') {
+                strokeColor = "black";
+            }
+        }
+
+        const pathHTML = `<path d="M12.5 19.5 L16.5 23.5 L24.5 14" stroke="${strokeColor}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />`;
+        catalogColorSvg.insertAdjacentHTML('beforeend', pathHTML);
+        return;
     }
 });

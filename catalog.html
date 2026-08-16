@@ -277,7 +277,9 @@
                                     <hr>
 
                                     <div class="price-box">
-                                        <div class="price-box-header d-flex justify-content-between align-items-center">
+                                        <div class="price-box-header d-flex justify-content-between align-items-center"
+                                            data-bs-toggle="collapse" data-bs-target="#priceCollapse"
+                                            style="cursor: pointer;">
                                             <p>Price</p>
                                             <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
@@ -286,7 +288,7 @@
                                                         fill="black" />
                                                 </svg></p>
                                         </div>
-                                        <div class="range-wrapper">
+                                        <div class="range-wrapper collapse show" id="priceCollapse">
                                             <div class="range-container">
                                                 <div class="slider-track"></div>
                                                 <input type="range" id="slider-min" min="0" max="300" value="50">
@@ -302,7 +304,9 @@
 
                                     <hr>
                                     <div class="color-box">
-                                        <div class="color-box-header d-flex justify-content-between align-items-center">
+                                        <div class="color-box-header d-flex justify-content-between align-items-center"
+                                            data-bs-toggle="collapse" data-bs-target="#colorCollapse"
+                                            style="cursor: pointer;">
                                             <p>Color</p>
                                             <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
@@ -311,7 +315,7 @@
                                                         fill="black" />
                                                 </svg></p>
                                         </div>
-                                        <div class="color-wrapper">
+                                        <div class="color-wrapper collapse show" id="colorCollapse">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37"
                                                 viewBox="0 0 37 37" fill="none">
                                                 <circle cx="18.5" cy="18.5" r="18.5" fill="#00C12B" />
@@ -376,7 +380,9 @@
                                     </div>
                                     <hr>
                                     <div class="size-box">
-                                        <div class="size-box-header d-flex justify-content-between align-items-center">
+                                        <div class="size-box-header d-flex justify-content-between align-items-center"
+                                            data-bs-toggle="collapse" data-bs-target="#sizeCollapse"
+                                            style="cursor: pointer;">
                                             <p>Size</p>
                                             <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
@@ -385,7 +391,7 @@
                                                         fill="black" />
                                                 </svg></p>
                                         </div>
-                                        <div class="size-wrapper">
+                                        <div class="size-wrapper collapse show" id="sizeCollapse">
                                             <button class="size-btn size-button">XX-Small</button>
                                             <button class="size-btn size-button">X-Small</button>
                                             <button class="size-btn size-button">Small</button>
@@ -401,7 +407,8 @@
                                     <hr>
 
                                     <div class="dress-box">
-                                        <div class="dress-box-header d-flex justify-content-between align-items-center">
+                                        <div class="dress-box-header d-flex justify-content-between align-items-center"
+                                            style="cursor: pointer;">
                                             <p>Dress Style</p>
                                             <p><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                                     viewBox="0 0 16 16" fill="none">
@@ -410,7 +417,7 @@
                                                         fill="black" />
                                                 </svg></p>
                                         </div>
-                                        <div class="category-cat d-flex flex-column">
+                                        <div class="category-cat d-flex flex-column collapse show" id="dressCollapse">
                                             <div
                                                 class="category-flex d-flex justify-content-between align-items-center">
                                                 <a href="catalog.html">Casual</a>
