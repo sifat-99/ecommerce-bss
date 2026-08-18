@@ -157,9 +157,10 @@ document.addEventListener('click', function (e) {
         const container = minusBtn.closest('.cart-quantity-btn');
         const quantitySpan = container.querySelector('span');
         if (quantitySpan) {
-            let number = Number.parseInt(quantitySpan.innerHTML, 10) || 0;
-            if (number > 0) {
+            let number = Number.parseInt(quantitySpan.innerHTML, 10) || 1;
+            if (number > 1) {
                 quantitySpan.innerHTML = number - 1;
+                if (typeof updateCartItemTotal === 'function') updateCartItemTotal();
             }
         }
         return;
@@ -172,11 +173,12 @@ document.addEventListener('click', function (e) {
         if (quantitySpan) {
             let number = Number.parseInt(quantitySpan.innerHTML, 10) || 0;
             quantitySpan.innerHTML = number + 1;
+            if (typeof updateCartItemTotal === 'function') updateCartItemTotal();
         }
         return;
     }
 
-    // Size Selection (Product Details)
+
     const sizeBtn = e.target.closest('.choose-size button');
     if (sizeBtn) {
         e.preventDefault();
@@ -190,7 +192,7 @@ document.addEventListener('click', function (e) {
         return;
     }
 
-    // Color Selection (Product Details)
+
     const colorBox = e.target.closest('.colors .color-box');
     if (colorBox) {
         e.preventDefault();
@@ -214,7 +216,6 @@ document.addEventListener('click', function (e) {
         return;
     }
 
-    // Catalog Size Selection
     const catalogSizeBtn = e.target.closest('.size-wrapper .size-button');
     if (catalogSizeBtn) {
         e.preventDefault();
@@ -224,7 +225,6 @@ document.addEventListener('click', function (e) {
         return;
     }
 
-    // Catalog Color Selection
     const catalogColorSvg = e.target.closest('.color-wrapper svg');
     if (catalogColorSvg) {
         e.preventDefault();
@@ -237,7 +237,6 @@ document.addEventListener('click', function (e) {
             }
         });
 
-        // Find if the circle is white to make stroke black, otherwise white
         let strokeColor = "white";
         const circle = catalogColorSvg.querySelector('circle');
         if (circle) {
@@ -251,4 +250,59 @@ document.addEventListener('click', function (e) {
         catalogColorSvg.insertAdjacentHTML('beforeend', pathHTML);
         return;
     }
+
+    const trashIcon = e.target.closest('.delete-icon') || e.target.closest('#trash-icon');
+    console.log(trashIcon);
+    if (trashIcon) {
+        e.preventDefault();
+        const cartCard = trashIcon.closest('.cart-card');
+        const nextHR = cartCard.nextElementSibling;
+        if (cartCard) {
+            cartCard.remove();
+            if (nextHR && nextHR.tagName.toUpperCase() === 'HR') {
+                nextHR.remove();
+            }
+            if (typeof updateCartItemTotal === 'function') updateCartItemTotal();
+        }
+        return;
+    }
 });
+
+
+
+const calculateCartItemTotal = () => {
+    const allCartCards = document.querySelectorAll('.cart-card');
+    let subtotal = 0;
+    allCartCards.forEach(cartCard => {
+        const priceElement = cartCard.querySelector('.cart-price span');
+        const quantityElement = cartCard.querySelector('.cart-quantity-btn span');
+
+        if (priceElement && quantityElement) {
+            const price = Number.parseInt(priceElement.innerHTML.replace('$', '')) || 0;
+            const quantity = Number.parseInt(quantityElement.innerHTML) || 0;
+            subtotal += price * quantity;
+        }
+    });
+    return subtotal;
+};
+
+const updateCartItemTotal = () => {
+    const subtotalElement = document.getElementById('cart-subtotal');
+    const discountElement = document.getElementById('cart-discount');
+    const deliveryElement = document.getElementById('cart-delivery');
+    const totalElement = document.getElementById('cart-total');
+
+    if (!subtotalElement || !discountElement || !deliveryElement || !totalElement) return;
+
+    const subtotal = calculateCartItemTotal();
+    const discount = Math.round(subtotal * 0.20);
+    const deliveryFee = subtotal > 0 ? 15 : 0;
+    const total = subtotal - discount + deliveryFee;
+
+    subtotalElement.innerHTML = '$' + subtotal;
+    discountElement.innerHTML = '-$' + discount;
+    deliveryElement.innerHTML = '$' + deliveryFee;
+    totalElement.innerHTML = '$' + total;
+};
+
+updateCartItemTotal();
