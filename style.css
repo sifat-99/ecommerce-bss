@@ -1073,6 +1073,13 @@ input[type="range"]::-moz-range-thumb {
   height: 24px !important;
 }
 
+.cart-btn:hover {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-primary) !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
 
 
 

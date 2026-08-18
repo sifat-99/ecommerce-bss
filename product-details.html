@@ -302,8 +302,8 @@
                     <button class="btn border-0 shadow-none p-0 text-dark fs-5"><i
                         class="fa-solid fa-plus"></i></button>
                   </div>
-                  <button class="btn btn-dark rounded-pill flex-grow-1 font-primary-medium bg-tertiary"
-                    style="height: 52px">Add to Cart</button>
+                  <button class="btn btn-dark cart-btn rounded-pill flex-grow-1 font-primary-medium bg-tertiary" style="height: 52px;
+                    ">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -331,9 +331,31 @@
             <!-- Tabs Content -->
             <div class="tab-content" id="pills-tabContent">
 
-              <!-- Details Tab Pane (Empty for now) -->
+              <!-- Details Tab Pane -->
               <div class="tab-pane fade" id="pills-details" role="tabpanel" tabindex="0">
-                <p class="text-center text-muted">Product details</p>
+                <div class="product-details-content p-3 p-md-4 rounded bg-light mt-3">
+                  <h5 class="fw-bold mb-3">Product Description</h5>
+                  <p class="text-secondary mb-4" style="line-height: 1.6;">
+                    Upgrade your everyday wardrobe with our premium selection. Made from the finest quality materials,
+                    this product ensures both lasting comfort and durability. Its modern design and flattering fit make
+                    it an essential addition to any closet, perfect for casual outings or a relaxed weekend at home.
+                  </p>
+
+                  <h5 class="fw-bold mb-3">Key Features</h5>
+                  <ul class="text-secondary mb-4" style="line-height: 1.8;">
+                    <li><strong>Material:</strong> 100% Premium breathable fabric.</li>
+                    <li><strong>Fit:</strong> Regular fit that offers freedom of movement.</li>
+                    <li><strong>Care Instructions:</strong> Machine wash cold with similar colors, tumble dry low. Do
+                      not bleach.</li>
+                    <li><strong>Design:</strong> Sleek and minimalist aesthetic, versatile for layering.</li>
+                  </ul>
+
+                  <h5 class="fw-bold mb-3">Shipping & Returns</h5>
+                  <p class="text-secondary mb-0" style="line-height: 1.6;">
+                    Free standard shipping on all orders over $50. If you are not completely satisfied with your
+                    purchase, you may return the item within 30 days of delivery for a full refund or exchange.
+                  </p>
+                </div>
               </div>
 
               <!-- Reviews Tab Pane (Active) -->
@@ -482,9 +504,80 @@
 
               </div>
 
-              <!-- FAQs Tab Pane (Empty for now) -->
+              <!-- FAQs Tab Pane -->
               <div class="tab-pane fade" id="pills-faqs" role="tabpanel" tabindex="0">
-                <p class="text-center text-muted">FAQs</p>
+                <div class="faq-content p-3 p-md-4 rounded mt-3">
+                  <h5 class="fw-bold mb-4">Frequently Asked Questions</h5>
+                  <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item border-0 border-bottom mb-2">
+                      <h2 class="accordion-header" id="faqHeadingOne">
+                        <button class="accordion-button collapsed bg-transparent shadow-none fw-semibold px-0 py-3"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="false"
+                          aria-controls="faqCollapseOne">
+                          How do I know my correct size?
+                        </button>
+                      </h2>
+                      <div id="faqCollapseOne" class="accordion-collapse collapse" aria-labelledby="faqHeadingOne"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body px-0 text-secondary">
+                          We recommend checking our detailed size guide available on the product page. If you are
+                          between sizes, we suggest sizing up for a more relaxed fit or sizing down for a tailored look.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-2">
+                      <h2 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button collapsed bg-transparent shadow-none fw-semibold px-0 py-3"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false"
+                          aria-controls="faqCollapseTwo">
+                          What is your return and exchange policy?
+                        </button>
+                      </h2>
+                      <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body px-0 text-secondary">
+                          We offer a hassle-free 30-day return and exchange policy. Items must be unworn, unwashed, and
+                          in their original condition with tags attached. Contact our support team to initiate a return.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item border-0 border-bottom mb-2">
+                      <h2 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button collapsed bg-transparent shadow-none fw-semibold px-0 py-3"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree"
+                          aria-expanded="false" aria-controls="faqCollapseThree">
+                          How should I care for this product?
+                        </button>
+                      </h2>
+                      <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body px-0 text-secondary">
+                          To maintain the quality of the fabric, machine wash cold with similar colors. Do not bleach.
+                          Tumble dry on low heat or hang dry to prevent shrinking.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item border-0 mb-2">
+                      <h2 class="accordion-header" id="faqHeadingFour">
+                        <button class="accordion-button collapsed bg-transparent shadow-none fw-semibold px-0 py-3"
+                          type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour"
+                          aria-expanded="false" aria-controls="faqCollapseFour">
+                          Do you offer international shipping?
+                        </button>
+                      </h2>
+                      <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body px-0 text-secondary">
+                          Yes, we ship worldwide! International shipping rates and delivery times vary depending on the
+                          destination. You can review the shipping costs at checkout before completing your order.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
             </div>
